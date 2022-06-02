@@ -1,3 +1,6 @@
+$(window).on('load', function() {
+    $("#loader-wrapper").delay(500).fadeOut(500);
+});
 jQuery(document).ready(function() {
 
     //   Courese section
