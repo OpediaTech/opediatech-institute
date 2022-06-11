@@ -65,11 +65,8 @@
 
 @media screen and (max-width: 1199px) {
     .hero-left-content h1 {
-        font-weight: 700;
-        font-size: 5rem;
-        line-height: 6.8rem;
-        color: #373660;
-        text-transform: uppercase;
+        font-size: 4rem;
+        line-height: 5.8rem;
     }
     .hero-left-content p {
         font-size: 1.6rem;
@@ -95,6 +92,24 @@
         height: 71em;
         left: -29px;
     }
+    .hero-img img {
+        height: auto;
+        width: 100%;
+    }
+    .hero-left-content h1 span {
+        font-size: 5rem;
+    }
+    .hero-left-content h2 {
+        font-size: 4rem;
+    }
+    .hero-left-content h1 img {
+        width: 15.5rem;
+        right: 52px;
+        bottom: -9px;
+    }
+    .swiper.mySwiper {
+        height: 145px;
+    }
     /* COURSE SECTION */
     ul.course-list li a {
         font-size: 2rem;
@@ -116,6 +131,26 @@
         font-size: 1.8rem;
         margin-top: 3rem;
     }
+    .course-section .list-group-item:hover {
+        padding-left: 0;
+    }
+    .course-section .list-group-item:before {
+        display: none;
+    }
+    .course-section .list-group-item:hover img {
+        display: none;
+    }
+    .section-title2.about h2 span:after {
+        width: 77%;
+    }
+    .section-title2.virtual h2 span:after {
+        width: 87%;
+        left: 12%;
+    }
+    .testimonial-section .section-title2 h2 span:after {
+        width: 35%;
+        left: 0;
+    }
     /* ACTIVITIES SECTION */
     .activities-title-wrap h4 {
         font-size: 1.8rem;
@@ -129,6 +164,12 @@
     }
     .section-title h2:after {
         width: 176px;
+    }
+    .teacher-sec-wrap .card-img-top {
+        width: 100% !important;
+    }
+    .facilities-img img {
+        height: 220px;
     }
     /* MARKET SECTION */
     .course-short-modal.market .course-details-wrap {
@@ -156,6 +197,17 @@
     .activities-section.activities-page .owl-nav {
         left: 93%;
     }
+    .section-title2 h2 span {
+        font-size: 40px;
+        display: block
+    }
+    .section-title2 p {
+        font-size: 17px;
+    }
+    .marketplace-section {
+        padding: 7rem 0 7rem;
+        padding-bottom: 3rem;
+    }
     /* FOOTER */
     .footer__top {
         padding: 100px 0;
@@ -177,6 +229,9 @@
     }
     .seat__book__inner form button {
         margin-top: 15px;
+    }
+    .seat__title form {
+        flex-wrap: wrap;
     }
     .facilities-banner-right-content h1.f-title {
         font-size: 37px;
@@ -220,6 +275,13 @@
         font-size: 21px;
         line-height: 0;
     }
+    .scroll-up img {
+        height: 170px;
+    }
+    .scroll-up {
+        bottom: 0;
+        right: 0
+    }
 }
 
 
@@ -233,6 +295,10 @@
     .hero-left-content p {
         font-size: 1.5rem;
         line-height: 2.2rem;
+    }
+    .hero-img {
+        margin-top: 35px;
+        margin-left: 0;
     }
     .btn-second {
         font-size: 1.6rem;
@@ -298,10 +364,10 @@
         line-height: 3rem;
     }
     .course-bottom-item:nth-child(1):after {
-        right: -5rem;
+        right: -3rem;
     }
     .course-bottom-item:nth-child(2):after {
-        right: -5rem;
+        right: -3rem;
     }
     ul.course-list li:hover:before {
         display: none;
@@ -323,6 +389,12 @@
     }
     .activities-section .owl-carousel .owl-stage-outer {
         height: 35rem;
+    }
+    .course-section .list-group-item {
+        font-size: 2rem;
+    }
+    .section-title2.about h2 {
+        font-size: 18px;
     }
     /* tabs */
     .list-group {
@@ -351,6 +423,29 @@
     }
     .course-short-modal.market .course-details-wrap {
         width: 33.3rem;
+    }
+    .section-title2.about h2 span {
+        font-size: 37px;
+        display: block;
+    }
+    .section-title2.virtual h2 span:after {
+        width: 49%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .section-title2.virtual {
+        text-align: center !important;
+        margin-top: 40px;
+    }
+    .section-title2 p {
+        text-align: center;
+    }
+    .section-title2.provide h2 span:after {
+        width: 65%;
+        left: 0;
+    }
+    .hero-section {
+        padding-top: 13em;
     }
     /* MARKET SECTION */
     .marketplace-section .owl-carousel .owl-stage-outer {
@@ -597,6 +692,32 @@
     .list-group-item {
         font-size: 1.8rem;
     }
+    .section-title2.about {
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    .section-title2.about h2 span:after {
+        width: 32%;
+        left: 51%;
+        transform: translateX(-50%);
+    }
+    .facilities-img img {
+        height: auto;
+    }
+    .testimonial-section .section-title2 {
+        text-align: center;
+    }
+    .testimonial-section .section-title2 h2 span:after {
+        width: 63%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    h2.partnar-top:after {
+        width: 166px !important;
+    }
+    .partner__section .section-title h2:after {
+        width: 178px;
+    }
     /* ACTIVITIES SECTION */
     .activities-section .owl-carousel .owl-stage-outer {
         height: 45rem;
@@ -654,7 +775,8 @@
     }
     /* FOOTER */
     .footer__triton {
-        text-align: center;
+        text-align: left;
+        margin-top: 70px;
     }
     .footer__triton .triton__title {
         margin-top: 20px;
@@ -757,6 +879,9 @@
     }
     .signIn-section .opedia-img {
         width: 400px;
+    }
+    .scroll-up {
+        bottom: 10%;
     }
 }
 
@@ -955,6 +1080,21 @@
     .signIn-section .opedia-img {
         width: 80%;
     }
+    .section-title2 h2 {
+        font-size: 16px;
+    }
+    .section-title2 h2 span {
+        font-size: 26px;
+    }
+    .activities-section .section-title h2:after {
+        width: 216px;
+    }
+    .teacher-section .section-title h2:after {
+        width: 258px;
+    }
+    .marketplace-section .section-title h2:after {
+        width: 230px;
+    }
 }
 
 @media screen and (max-width: 424px) {
@@ -1070,6 +1210,9 @@
     }
     .checkout-section .payment-subtitle-2 {
         font-size: 18px;
+    }
+    .student-project-section .section-title h2 {
+        font-size: 2.2rem;
     }
 }
 

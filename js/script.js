@@ -7,32 +7,32 @@ jQuery(document).ready(function() {
     function setDots() {
         $(".owl-dots").removeClass('disabled');
     }
-    $('.activiteis-wrap').owlCarousel({
-            loop: true,
-            margin: 40,
-            responsiveClass: true,
-            dots: false,
-            nav: true,
-            navText: ['<i class="fas fa-arrow-left"></i>', '<i class="fas fa-arrow-right"></i>', ],
-            lazyLoad: true,
-            responsive: {
-                0: {
-                    items: 1,
-                    nav: false
-                },
-                768: {
-                    items: 2,
-                    nav: false
-                },
-                1024: {
-                    items: 3,
-                    loop: true
-                }
-            },
-            onInitialized: setDots,
-            onChanged: setDots
-        })
-        // RECENT ACTIVITY
+    // $('.activiteis-wrap').owlCarousel({
+    //         loop: true,
+    //         margin: 40,
+    //         responsiveClass: true,
+    //         dots: false,
+    //         nav: true,
+    //         navText: ['<i class="fas fa-arrow-left"></i>', '<i class="fas fa-arrow-right"></i>', ],
+    //         lazyLoad: true,
+    //         responsive: {
+    //             0: {
+    //                 items: 1,
+    //                 nav: false
+    //             },
+    //             768: {
+    //                 items: 2,
+    //                 nav: false
+    //             },
+    //             1024: {
+    //                 items: 3,
+    //                 loop: true
+    //             }
+    //         },
+    //         onInitialized: setDots,
+    //         onChanged: setDots
+    //     })
+    // RECENT ACTIVITY
     $('.recent-activity').owlCarousel({
             loop: true,
             margin: 40,
@@ -208,24 +208,21 @@ jQuery(document).ready(function() {
 
 
 
-    // smooth scrool
-    // var html_body = $('html, body');
-    // $('a.nav-link.contact').on('click', function () {
-    //     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-    //         var target = $(this.hash);
-    //         target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-    //         if (target.length) {
-    //             html_body.animate({
-    //                 scrollTop: target.offset().top - 0
-    //             }, 100);
-    //             return false;
-    //         }
-    //     }
-    // });	
-
-
-
-
+    // scroll up start here
+    $(function() {
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 300) {
+                $('.scrollTop').css({ 'bottom': '2%', 'opacity': '1', 'transition': 'all .9s ease' });
+            } else {
+                $('.scrollTop').css({ 'bottom': '-30%', 'opacity': '0', 'transition': 'all .9s ease' })
+            }
+        });
+        //Click event to scroll to top
+        $('.scrollTop').on('click', function() {
+            $('html, body').animate({ scrollTop: 0 }, 300);
+            return false;
+        });
+    });
 
 
 
@@ -257,8 +254,15 @@ jQuery(document).ready(function() {
         const header = document.getElementById('header')
             // When the scroll is greater than 80 viewport height, add the scroll-header class to the header tag
         if (this.scrollY >= 80) header.classList.add('scroll-header');
-        else header.classList.remove('scroll-header')
 
+        else header.classList.remove('scroll-header');
+
+
+        if (this.scrollY >= 80) {
+            header.classList.add('header-top-0')
+        } else {
+            header.classList.remove('header-top-0')
+        };
         if (window.matchMedia("(min-width: 768px)").matches) {
             if (this.scrollY >= 220) header.classList.add('scroll-header');
             else header.classList.remove('scroll-header')
@@ -270,11 +274,10 @@ jQuery(document).ready(function() {
 
 
     // Circle Animation
-    // $('.test-img-item').on('click', function(e) {
-    //     console.log(document.getElementById('test-main').src)
-    //     document.getElementById('test-main').src = e.target.src
-    //     document.getElementById('test-img').src = e.target.src
-    // })
+    $('.test-img-item').on('click', function(e) {
+        console.log(document.getElementById('test-main').src)
+        document.getElementById('test-main').src = e.target.src
+    })
 
 
 
@@ -372,4 +375,131 @@ jQuery(document).ready(function() {
     });
 
 
-});
+
+
+
+    // course Swiper
+    var swiper = new Swiper(".courseSwiper", {
+        direction: "vertical",
+        freeMode: true,
+        slidesToScroll: 1,
+        watchSlidesProgress: true,
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 3,
+            },
+            // when window width is >= 480px
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 30
+            },
+            // when window width is >= 640px
+            1024: {
+                slidesPerView: 6,
+                spaceBetween: 40
+            }
+        }
+    });
+    var swiper = new Swiper(".courseContentSwiper", {
+        loop: true,
+        autoplay: true,
+
+        loopFillGroupWithBlank: true,
+        thumbs: {
+            swiper: swiper,
+        }
+    });
+
+
+    $('.nav__name').on('click', function(e) {
+        let link = $('.nav__name');
+        link.removeClass('active');
+        $(this).addClass('active')
+
+    })
+
+
+    // count Down
+    function getTimeRemaining(endtime) {
+        var t = Date.parse(endtime) - Date.now();
+        var seconds = Math.floor((t / 1000) % 60);
+        var minutes = Math.floor((t / 1000 / 60) % 60);
+        var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+        var days = Math.floor(t / (1000 * 60 * 60 * 24));
+        return {
+            'total': t,
+            'days': days,
+            'hours': hours,
+            'minutes': minutes,
+            'seconds': seconds
+        };
+    }
+
+    function initializeClock(id, endtime) {
+        var clock = document.getElementById(id);
+        var daysSpan = clock.querySelector('.days');
+        var hoursSpan = clock.querySelector('.hours');
+        var minutesSpan = clock.querySelector('.minutes');
+        var secondsSpan = clock.querySelector('.seconds');
+
+        function updateClock() {
+            var t = getTimeRemaining(endtime);
+
+            daysSpan.innerHTML = t.days;
+            hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+            minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+            secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+            if (t.total <= 0) {
+                clearInterval(timeinterval);
+            }
+        }
+
+        updateClock();
+        var timeinterval = setInterval(updateClock, 1000);
+    }
+    // count down timer:
+    var deadline = new Date(Date.now() + 1 * 30 * 60 * 60 * 1000);
+
+    initializeClock('clockdiv', deadline);
+
+    var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        spaceBetween: 10,
+        slidesPerView: 6,
+        freeMode: true,
+        direction: "vertical",
+        watchSlidesProgress: true,
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 2,
+                direction: "horizontal",
+            },
+            // when window width is >= 480px
+            768: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+                direction: "horizontal",
+            },
+            // when window width is >= 640px
+            1024: {
+                slidesPerView: 6,
+                spaceBetween: 40
+            }
+        }
+    });
+    var swiper2 = new Swiper(".mySwiper2", {
+        loop: true,
+        autoplay: true,
+        spaceBetween: 5,
+        thumbs: {
+            swiper: swiper,
+        },
+    });
+
+
+
+
+})
