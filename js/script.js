@@ -182,28 +182,30 @@ jQuery(document).ready(function() {
     })
 
     // Clients
-    // $('.client-wrapper').owlCarousel({
-    //   loop:true,
-    //   margin:10,
-    //   responsiveClass:true,
-    //   dots:true,
-    //   nav:false,
-    //   responsive:{
-    //       0:{
-    //           items:3,
-    //           nav:false
-    //       },
-    //       576:{
-    //           items:4,
-    //           nav:false
-    //       },
-    //       992:{
-    //           items:5,
-    //           loop:true
-    //       }
-    //   },
-    // })
-    // new WOW().init();
+    $('.slider__image').owlCarousel({
+        loop: true,
+        // spaceBetween: 10,
+        center: true,
+        responsiveClass: true,
+        dots: false,
+        navText: ['<i class="fas fa-arrow-left"></i>', '<i class="fas fa-arrow-right"></i>', ],
+        nav: true,
+        responsive: {
+            0: {
+                items: 3,
+                nav: false
+            },
+            576: {
+                items: 4,
+                nav: false
+            },
+            992: {
+                items: 5,
+                loop: true
+            }
+        },
+    })
+
 
 
 
@@ -239,11 +241,11 @@ jQuery(document).ready(function() {
                 sectionTop = current.offsetTop - 50,
                 sectionId = current.getAttribute('id')
 
-            if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
-            } else {
-                document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
-            }
+            // if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            //     document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
+            // } else {
+            //     document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
+            // }
         })
     }
     window.addEventListener('scroll', scrollActive)
@@ -464,40 +466,52 @@ jQuery(document).ready(function() {
 
     initializeClock('clockdiv', deadline);
 
-    var swiper = new Swiper(".mySwiper", {
+
+
+
+
+    // Course carousel
+
+    // Course section
+    var owl = $('.course-content');
+    owl.owlCarousel({
         loop: true,
-        spaceBetween: 10,
-        slidesPerView: 6,
-        freeMode: true,
-        direction: "vertical",
-        watchSlidesProgress: true,
-        breakpoints: {
-            // when window width is >= 320px
-            320: {
-                slidesPerView: 2,
-                direction: "horizontal",
+        margin: 40,
+        responsiveClass: true,
+        dots: false,
+        autoplay: false,
+        nav: false,
+        lazyLoad: true,
+        items: 3,
+        center: true,
+        responsive: {
+            0: {
+                items: 1,
+                nav: false
             },
-            // when window width is >= 480px
             768: {
-                slidesPerView: 4,
-                spaceBetween: 20,
-                direction: "horizontal",
+                items: 2,
+                nav: false
             },
-            // when window width is >= 640px
             1024: {
-                slidesPerView: 6,
-                spaceBetween: 40
+                items: 3,
+                loop: true
             }
-        }
-    });
-    var swiper2 = new Swiper(".mySwiper2", {
-        loop: true,
-        autoplay: true,
-        spaceBetween: 5,
-        thumbs: {
-            swiper: swiper,
         },
+
     });
+    owl.on('changed.owl.carousel', function() {
+        id = $('.course-content .owl-item.active section')[1].getAttribute('id');
+        const sections = document.querySelectorAll('.course-content section[id]')
+        sections.forEach(current => {
+            sectionId = current.getAttribute('id')
+            if (id == sectionId) {
+                document.querySelector('.course-sidebar a[href*=' + sectionId + ']').classList.add('active-link')
+            } else {
+                document.querySelector('.course-sidebar a[href*=' + sectionId + ']').classList.remove('active-link')
+            }
+        })
+    })
 
 
 

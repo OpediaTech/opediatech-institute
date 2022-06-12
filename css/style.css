@@ -232,7 +232,7 @@ label {
     border-radius: 6px;
     padding: .5em 1.2em;
     cursor: pointer;
-    transition: .3s;
+    transition: .3s ease-in-out;
 }
 
 .btn:hover {
@@ -254,7 +254,7 @@ label {
     border-radius: 6px;
     padding: 0.7em 2em;
     cursor: pointer;
-    transition: .3s;
+    transition: .3s ease-in-out;
 }
 
 .btn-main:hover {
@@ -281,26 +281,30 @@ label {
     background: linear-gradient(90deg, #005C97 0%, #363795 100%);
     border-radius: 8px;
     cursor: pointer;
-    transition: .3s;
+    transition: .3s ease-in-out;
 }
 
 .btn-second:hover {
     color: #fff;
+    transition: .3s ease-in-out;
 }
 
 .btn:hover {
     background: linear-gradient(288.46deg, #FECA3F -42.89%, #F08100 49.57%);
     color: #fff;
+    transition: .3s ease-in-out;
 }
 
 .btn-main:hover {
     background: linear-gradient(288.46deg, #FECA3F -42.89%, #F08100 49.57%);
-    color: #fff
+    color: #fff;
+    transition: .3s ease-in-out;
 }
 
 .btn-second:hover {
     background: linear-gradient(90deg, #005C97 0%, #031624 100%);
     color: #Fff;
+    transition: .3s ease-in-out;
 }
 
 .owl-nav i {
@@ -626,7 +630,6 @@ img.hero-utils {
 
 .hero-section {
     padding-top: 28em;
-    padding-bottom: 20em;
 }
 
 .hero-left-content h1 {
@@ -1233,6 +1236,10 @@ ul.course-list li:hover:before {
     right: 6%;
     bottom: 42%;
     cursor: pointer;
+}
+
+.course-content .owl-stage-outer {
+    margin-left: -40px !important;
 }
 
 
@@ -1869,6 +1876,20 @@ ol.breadcrumb li a {
     padding-left: 35px;
 }
 
+a.list-group-item.active-link:before {
+    visibility: visible;
+    opacity: 1;
+    left: 0;
+}
+
+a.list-group-item.active-link img {
+    display: inline-block;
+}
+
+a.list-group-item.active-link {
+    padding-left: 35px;
+}
+
 
 /* ACTIVITIES SECTION */
 
@@ -1974,14 +1995,52 @@ ul.date-activites li span {
     transform: translateX(-50%);
 }
 
-.activities-section .owl-nav i {
+.activities-features-content .btn {
+    position: absolute;
+    right: 32px;
+    top: 31px;
+    display: flex;
+    align-items: center;
+}
+
+.activities-4-wrap .swiper {
+    height: 650px !important;
+    padding-bottom: 27px;
+}
+
+.activities-4-wrap .swiper-scrollbar {
+    background: var(--liner-gradient);
+}
+
+.activities-4-wrap .card img {
+    border-radius: 1.2rem 1.2rem 0 0;
+    width: 435px;
+    height: 180px;
+}
+
+.activities-4-wrap .card {
+    height: 308px;
+}
+
+.ac-featured-img img {
+    height: 632px;
+}
+
+.activities-features-content .btn img {
+    width: 15px;
+    height: 13.5px;
+    margin-right: 7px;
+}
+
+
+/* .activities-section .owl-nav i {
     height: 2.4rem;
     width: 2.4rem;
     display: inline-block;
     padding-top: .7rem;
     margin-right: 1rem;
     transition: .3s;
-}
+} */
 
 button.owl-next i {
     background: var(--liner-gradient);
@@ -2066,14 +2125,21 @@ span.ac-date {
     font-weight: 700;
     font-size: 40px;
     line-height: 49px;
-    background: linear-gradient(180deg, #3EA3DC 0%, #27348B 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
     border-bottom: 3px solid #F7F7F7;
     display: block;
     padding-bottom: 30px;
+    font-size: 40px;
+    line-height: 49px;
+    color: rgba(13, 41, 62, 0.9);
+}
+
+.slider__section span.ac-date {
+    border: none;
+}
+
+.slider__section.activities {
+    margin: 0;
+    margin-bottom: 200px;
 }
 
 .featured-img-text .ac-f-title {
@@ -2147,7 +2213,7 @@ span.ac-date {
 
 .activities-section.activities-page .owl-nav {
     position: absolute;
-    left: 95%;
+    left: 93%;
     top: -115px;
 }
 
@@ -2182,6 +2248,11 @@ a.more {
 
 .facilities-img img {
     height: 30.8rem;
+}
+
+.hero-section.facilities .hero-img {
+    margin-top: -65px;
+    margin-left: -76px;
 }
 
 .facilities-section .section-title p {
@@ -3583,6 +3654,20 @@ img.location_contact {
     margin-bottom: 15px;
 }
 
+.hero-section.registration .hero-left-content p {
+    margin-top: 8rem;
+    margin-bottom: 3.7rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(13, 41, 62, 0.6);
+}
+
+.hero-section.registration .hero-left-content h1 img {
+    right: 16%;
+}
+
 .registration-section .form-check .form-check-input {
     float: left;
     margin-left: -1.5em;
@@ -3604,6 +3689,7 @@ img.location_contact {
     box-shadow: inset -1px -1px 6px rgba(255, 104, 43, 0.05), inset 1px 1px 3px rgba(166, 171, 189, 0.5);
     border-radius: 5px;
     color: #C4C4C4 !important;
+    font-size: 1.5rem;
 }
 
 .registration-section .form-control::placeholder {
@@ -3659,6 +3745,24 @@ img.location_contact {
 
 
 /* *************************************ACTIVITIES FORM STARTS ********************************** */
+
+.activities.hero-left-content h1 img {
+    position: absolute;
+    width: 25.5rem;
+    right: 11%;
+    bottom: -13px;
+}
+
+.hero-section.activities .hero-imgs img {
+    width: 631px;
+}
+
+.hero-section.activities .hero-left-content h1 img {
+    position: absolute;
+    width: 25.5rem;
+    right: 12%;
+    bottom: -13px;
+}
 
 .activities-hero-section.actvts-from .ac-hero-content {
     text-align: center;
@@ -4005,6 +4109,163 @@ img.location_contact {
 
 
 /* *************************************SIGN IN ENDS ********************************** */
+
+
+/* ========================================
+        our gallery section start here
+===========================================*/
+
+.our__gallery__inner .title {
+    padding: 100px 0 40px;
+}
+
+.slider__section .owl-nav button.owl-next {
+    position: absolute;
+    right: -70px;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+.slider__section button.owl-prev {
+    position: absolute;
+    left: -60px;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+.our__gallery__inner .title h1,
+.our__gallery__inner .title h1 span {
+    font-weight: 800;
+    font-size: 56px;
+    line-height: 68px;
+    display: inline-block;
+    background: linear-gradient(180deg, #3EA3DC 0%, #27348B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.our__gallery__inner .title h1 span {
+    position: relative;
+}
+
+.our__gallery__inner .title h1 span::after {
+    position: absolute;
+    content: "";
+    height: 6px;
+    width: 100%;
+    right: 0;
+    top: 0;
+    background: linear-gradient(180deg, #FECA3F -4.31%, #F08100 101.19%);
+    border-radius: 13px;
+}
+
+.iframe__image img {
+    width: 100%;
+}
+
+.iframe__image.last__child img {
+    height: 250px;
+}
+
+img.ifram-main {
+    height: 540px;
+}
+
+.iframe__image.last__child .image__up:first-child {
+    margin-bottom: 40px;
+}
+
+.iframe__image.first__child img:last-child {
+    max-width: 120px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.iframe__image.first__child {
+    position: relative;
+}
+
+.iframe__image.last__child .image img:last-child {
+    max-width: 64px;
+    height: 64px;
+}
+
+.iframe__image.last__child .image {
+    position: relative;
+}
+
+.iframe__image.last__child img:last-child {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.our__gallery__inner .slider__image {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slider__section {
+    margin: 40px 0;
+}
+
+.slider__image img {
+    width: 230px !important;
+}
+
+.slider__section .owl-carousel .owl-item {
+    width: 250px !important;
+}
+
+@media screen and (max-width: 1023px) {}
+
+@media screen and (max-width: 991px) {
+    .our__gallery__inner .title {
+        text-align: center;
+    }
+    .iframe__image.first__child {
+        position: relative;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .our__gallery__inner .title h1,
+    .our__gallery__inner .title h1 span {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .iframe__image.first__child img:last-child {
+        max-width: 64px;
+    }
+}
+
+@media screen and (max-width: 499px) {
+    .our__gallery__inner .slider__image {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 423px) {
+    .our__gallery__inner .title h1,
+    .our__gallery__inner .title h1 span {
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width: 320px) {}
+
+
+/* ========================================
+        our gallery section end here
+===========================================*/
 
 
 /* *************************************HEADER STARTS ********************************** */

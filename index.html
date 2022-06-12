@@ -23,7 +23,6 @@
 </head>
 
 <body>
-
     <!--=============== HEADER ===============-->
     <header>
         <div class="header" id="header" style="display:block">
@@ -41,7 +40,6 @@
                                             <span class="nav__name">HOME</span>
                                         </a>
                                     </li>
-
                                     <li class="nav__item">
                                         <a href="#courses" class="nav__link">
                                             <i class='bx bx-book-alt nav__icon'></i>
@@ -49,14 +47,12 @@
                                             <span class="nav__name">COURSES</span>
                                         </a>
                                     </li>
-
                                     <li class="nav__item">
                                         <a href="#facilities" class="nav__link">
                                             <i class='bx bx-happy-alt nav__icon'></i>
                                             <span class="nav__name">FACILITIES</span>
                                         </a>
                                     </li>
-
                                     <li class="nav__item">
                                         <a href="#activities" class="nav__link">
                                             <i class='bx bx-layer-minus nav__icon'></i>
@@ -64,7 +60,6 @@
                                             <span class="nav__name">ACTIVITIES</span>
                                         </a>
                                     </li>
-
                                     <li class="nav__item">
                                         <a href="#contactme" class="nav__link">
                                             <i class='bx bxs-contact nav__icon'></i>
@@ -138,187 +133,191 @@
                 <div class="container">
                     <div class="row align-items-start">
                         <div class="col-xl-3">
-                            <div thumbsSlider="" class="swiper mySwiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <a class="list-group-item list-group-item-action active" id="Motion" data-bs-toggle="list" href="#motion" role="tab" aria-controls="motion"> <img src="./images/course/list.png" alt=""> Motion graphic </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a class="list-group-item list-group-item-action" id="graphic-list" data-bs-toggle="list" href="#graphic" role="tab" aria-controls="graphic"><img src="./images/course/list.png" alt=""> Graphic Design</a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a class="list-group-item list-group-item-action" id="digital-marketing-list" data-bs-toggle="list" href="#digital-marketing" role="tab" aria-controls="digital-marketing"> <img src="./images/course/list.png" alt="">Digital marketing</a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a class="list-group-item list-group-item-action" id="digital-marketing-list" data-bs-toggle="list" href="#Uiux" role="tab" aria-controls="digital-marketing"> <img src="./images/course/list.png" alt="">UI/UX Design</a>
-                                    </div>
-
-                                    <div class="swiper-slide">
-                                        <a class="list-group-item list-group-item-action" id="digital-marketing-list" data-bs-toggle="list" href="#frontend" role="tab" aria-controls="digital-marketing"> <img src="./images/course/list.png" alt="">Web Development</a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a class="list-group-item list-group-item-action" id="digital-marketing-list" data-bs-toggle="list" href="#Networking" role="tab" aria-controls="digital-marketing"> <img src="./images/course/list.png" alt="">Networking</a>
-                                    </div>
-
-                                </div>
+                            <div class="course-tag-wrapper">
+                                <ul class="course-sidebar">
+                                    <li>
+                                        <a class="list-group-item " data-bs-toggle="list" href="#motion" aria-controls="motion"> <img src="./images/course/list.png" alt=""> Motion graphic </a>
+                                    </li>
+                                    <li>
+                                        <a class="list-group-item" data-bs-toggle="list" href="#graphic" aria-controls="graphic"><img src="./images/course/list.png" alt=""> Graphic Design</a>
+                                    </li>
+                                    <li>
+                                        <a class="list-group-item" data-bs-toggle="list" href="#digital-marketing" aria-controls="digital-marketing"> <img src="./images/course/list.png" alt="">Digital marketing</a>
+                                    </li>
+                                    <li>
+                                        <a class="list-group-item" data-bs-toggle="list" href="#uiUx" aria-controls="digital-marketing"> <img src="./images/course/list.png" alt="">UI/UX Design</a>
+                                    </li>
+                                    <li>
+                                        <a class="list-group-item" data-bs-toggle="list" href="#webDesign" aria-controls="digital-marketing"> <img src="./images/course/list.png" alt="">Web Development</a>
+                                    </li>
+                                    <li>
+                                        <a class="list-group-item active-link" data-bs-toggle="list" href="#networking" aria-controls="digital-marketing"> <img src="./images/course/list.png" alt="">Networking</a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
 
 
                         <div class="col-xl-9">
-                            <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
-                                <div class="swiper-wrapper">
 
-                                    <div class="swiper-slide">
-                                        <!-- content -->
-                                        <div class="course-wrap ">
-                                            <div class="card mb-5">
-                                                <img src="./images/course/motion.gif" class="card-img-top" alt="...">
-                                                <div class="card-body">
-                                                    <h5 class="card-title">Advance Motion Graphics
-                                                    </h5>
-                                                    <div class="course-dureation">
-                                                        <span>CLASS : 40 CLASSES</span>
-                                                        <span>120 MINUTES</span>
-                                                    </div>
-                                                    <div class="course-action">
-                                                        <a href="#" class="btn-main">Explore</a>
-                                                        <img src="./images/course/info-circle.png" alt="" data-bs-toggle="modal" data-bs-target="#motion">
-                                                    </div>
+                            <div class="course-content owl-carousel">
+                                <section id="motion">
+                                    <!-- content -->
+                                    <div class="course-wrap ">
+                                        <div class="card mb-5">
+                                            <img src="./images/course/motion.gif" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Advance Motion Graphics
+                                                </h5>
+                                                <div class="course-dureation">
+                                                    <span>CLASS : 40 CLASSES</span>
+                                                    <span>120 MINUTES</span>
+                                                </div>
+                                                <div class="course-action">
+                                                    <a href="#" class="btn-main">Explore</a>
+                                                    <img src="./images/course/info-circle.png" alt="" data-bs-toggle="modal" data-bs-target="#motionModal">
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- content -->
                                     </div>
+                                    <!-- content -->
+                                </section>
 
-                                    <div class="swiper-slide">
-                                        <!-- content -->
-                                        <div class="course-wrap ">
-                                            <div class="card mb-5">
-                                                <img src="./images/course/graphic.gif" class="card-img-top" alt="...">
-                                                <div class="card-body">
-                                                    <h5 class="card-title">Professional Graphic Design
-                                                    </h5>
-                                                    <div class="course-dureation">
-                                                        <span>CLASS : 40 CLASSES</span>
-                                                        <span>120 MINUTES</span>
-                                                    </div>
-                                                    <div class="course-action">
-                                                        <a href="#" class="btn-main">Explore</a>
-                                                        <img src="./images/course/info-circle.png" alt="" data-bs-toggle="modal" data-bs-target="#graphics">
-                                                    </div>
+                                <!--=============== ABOUT ===============-->
+                                <section id="graphic">
+                                    <!-- content -->
+                                    <div class="course-wrap ">
+                                        <div class="card mb-5">
+                                            <img src="./images/course/graphic.gif" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Professional Graphic Design
+                                                </h5>
+                                                <div class="course-dureation">
+                                                    <span>CLASS : 40 CLASSES</span>
+                                                    <span>120 MINUTES</span>
                                                 </div>
-
-                                            </div>
-                                        </div>
-                                        <!-- content -->
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <!-- content -->
-                                        <div class="course-wrap ">
-                                            <div class="card mb-5">
-                                                <img src="./images/course/digital.gif" class="card-img-top" alt="...">
-                                                <div class="card-body">
-                                                    <h5 class="card-title">Scopes in Digital Marketing
-                                                    </h5>
-                                                    <div class="course-dureation">
-                                                        <span>CLASS : 40 CLASSES</span>
-                                                        <span>120 MINUTES</span>
-                                                    </div>
-                                                    <div class="course-action">
-                                                        <a href="#" class="btn-main">Explore</a>
-                                                        <img src="./images/course/info-circle.png" alt="" data-bs-toggle="modal" data-bs-target="#digitalMarketing">
-                                                    </div>
+                                                <div class="course-action">
+                                                    <a href="#" class="btn-main">Explore</a>
+                                                    <img src="./images/course/info-circle.png" alt="" data-bs-toggle="modal" data-bs-target="#graphicsModal">
                                                 </div>
-
                                             </div>
-                                        </div>
-                                        <!-- content -->
-                                    </div>
 
-                                    <div class="swiper-slide">
-                                        <!-- content -->
-                                        <div class="course-wrap ">
-                                            <div class="card mb-5">
-                                                <img src="./images/course/uiux.gif" class="card-img-top" alt="...">
-                                                <div class="card-body">
-                                                    <h5 class="card-title">Interactive UI/UX Design
-                                                    </h5>
-                                                    <div class="course-dureation">
-                                                        <span>CLASS : 40 CLASSES</span>
-                                                        <span>120 MINUTES</span>
-                                                    </div>
-                                                    <div class="course-action">
-                                                        <a href="#" class="btn-main">Explore</a>
-                                                        <img src="./images/course/info-circle.png" alt="" data-bs-toggle="modal" data-bs-target="#UIGraphic">
-                                                    </div>
+                                        </div>
+                                    </div>
+                                    <!-- content -->
+                                </section>
+
+                                <!--=============== SKILLS ===============-->
+                                <section id="digital-marketing">
+                                    <!-- content -->
+                                    <div class="course-wrap ">
+                                        <div class="card mb-5">
+                                            <img src="./images/course/digital.gif" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Scopes in Digital Marketing
+                                                </h5>
+                                                <div class="course-dureation">
+                                                    <span>CLASS : 40 CLASSES</span>
+                                                    <span>120 MINUTES</span>
                                                 </div>
-
-                                            </div>
-                                        </div>
-                                        <!-- content -->
-                                    </div>
-
-                                    <div class="swiper-slide">
-                                        <!-- content -->
-                                        <div class="course-wrap ">
-                                            <div class="card mb-5">
-                                                <img src="./images/course/website.gif" class="card-img-top" alt="...">
-                                                <div class="card-body">
-                                                    <h5 class="card-title">Web design & Development
-                                                    </h5>
-                                                    <div class="course-dureation">
-                                                        <span>CLASS : 40 CLASSES</span>
-                                                        <span>120 MINUTES</span>
-                                                    </div>
-                                                    <div class="course-action">
-                                                        <a href="#" class="btn-main">Explore</a>
-                                                        <img src="./images/course/info-circle.png" alt="" data-bs-toggle="modal" data-bs-target="#webDesign">
-
-                                                    </div>
+                                                <div class="course-action">
+                                                    <a href="#" class="btn-main">Explore</a>
+                                                    <img src="./images/course/info-circle.png" alt="" data-bs-toggle="modal" data-bs-target="#digitalMarketingModal">
                                                 </div>
-
                                             </div>
+
                                         </div>
-                                        <!-- content -->
                                     </div>
+                                    <!-- content -->
+                                </section>
 
-
-                                    <div class="swiper-slide">
-                                        <!-- content -->
-                                        <div class="course-wrap ">
-                                            <div class="card mb-5">
-                                                <img src="./images/course/networking.gif" class="card-img-top" alt="...">
-                                                <div class="card-body">
-                                                    <h5 class="card-title">MikroTik Routing All-in-1
-                                                    </h5>
-                                                    <div class="course-dureation">
-                                                        <span>CLASS : 40 CLASSES</span>
-                                                        <span>120 MINUTES</span>
-                                                    </div>
-                                                    <div class="course-action">
-                                                        <a href="#" class="btn-main">Explore</a>
-                                                        <img src="./images/course/info-circle.png" alt="" data-bs-toggle="modal" data-bs-target="#networkId">
-
-                                                    </div>
+                                <!--=============== PORTFOLIO ===============-->
+                                <section id="uiUx">
+                                    <!-- content -->
+                                    <div class="course-wrap ">
+                                        <div class="card mb-5">
+                                            <img src="./images/course/uiux.gif" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Interactive UI/UX Design
+                                                </h5>
+                                                <div class="course-dureation">
+                                                    <span>CLASS : 40 CLASSES</span>
+                                                    <span>120 MINUTES</span>
                                                 </div>
-
+                                                <div class="course-action">
+                                                    <a href="#" class="btn-main">Explore</a>
+                                                    <img src="./images/course/info-circle.png" alt="" data-bs-toggle="modal" data-bs-target="#UIGraphicModal">
+                                                </div>
                                             </div>
+
                                         </div>
-                                        <!-- content -->
                                     </div>
+                                    <!-- content -->
+                                </section>
 
+                                <!--=============== CONTACTME ===============-->
+                                <section id="webDesign">
+                                    <!-- content -->
+                                    <div class="course-wrap ">
+                                        <div class="card mb-5">
+                                            <img src="./images/course/website.gif" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Web design & Development
+                                                </h5>
+                                                <div class="course-dureation">
+                                                    <span>CLASS : 40 CLASSES</span>
+                                                    <span>120 MINUTES</span>
+                                                </div>
+                                                <div class="course-action">
+                                                    <a href="#" class="btn-main">Explore</a>
+                                                    <img src="./images/course/info-circle.png" alt="" data-bs-toggle="modal" data-bs-target="#webDesignModal">
 
-                                </div>
-                                <!-- <div class="swiper-button-next"></div>
-                                <div class="swiper-button-prev"></div> -->
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <!-- content -->
+                                </section>
+                                <!--=============== CONTACTME ===============-->
+                                <section id="networking">
+                                    <!-- content -->
+                                    <div class="course-wrap ">
+                                        <div class="card mb-5">
+                                            <img src="./images/course/networking.gif" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">MikroTik Routing All-in-1
+                                                </h5>
+                                                <div class="course-dureation">
+                                                    <span>CLASS : 40 CLASSES</span>
+                                                    <span>120 MINUTES</span>
+                                                </div>
+                                                <div class="course-action">
+                                                    <a href="#" class="btn-main">Explore</a>
+                                                    <img src="./images/course/info-circle.png" alt="" data-bs-toggle="modal" data-bs-target="#networkModal">
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <!-- content -->
+                                </section>
                             </div>
+
+
+
+
+
+
+
+
                         </div>
 
                         <!-- All courses Modals here -->
                         <!-- Modal -->
                         <!-- items -->
-                        <div class="modal fade" id="motion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal fade" id="motionModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
                                     <div class="modal-body">
@@ -358,7 +357,7 @@
                         </div>
                         <!-- items -->
                         <!-- items -->
-                        <div class="modal fade" id="graphics" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal fade" id="graphicsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
                                     <div class="modal-body">
@@ -398,7 +397,7 @@
                         </div>
                         <!-- items -->
                         <!-- items -->
-                        <div class="modal fade" id="digitalMarketing" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal fade" id="digitalMarketingModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
                                     <div class="modal-body">
@@ -438,7 +437,7 @@
                         </div>
                         <!-- items -->
                         <!-- items -->
-                        <div class="modal fade" id="UIGraphic" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal fade" id="UIGraphicModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
                                     <div class="modal-body">
@@ -477,7 +476,7 @@
                         </div>
                         <!-- items -->
                         <!-- items -->
-                        <div class="modal fade" id="webDesign" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal fade" id="webDesignModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
                                     <div class="modal-body">
@@ -517,7 +516,7 @@
                         </div>
                         <!-- items -->
                         <!-- items -->
-                        <div class="modal fade" id="networkId" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal fade" id="networkModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
                                     <div class="modal-body">
@@ -1122,8 +1121,6 @@
                                     <span>/ App Design</span>
                                 </h4>
                                 <span class="student-name">Red Jonathan John</span>
-
-
                             </div>
                         </div>
                     </a>
@@ -1143,8 +1140,6 @@
                                     <span>/ App Design</span>
                                 </h4>
                                 <span class="student-name">Red Jonathan John</span>
-
-
                             </div>
                         </div>
                     </a>
