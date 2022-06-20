@@ -39,7 +39,7 @@ jQuery(document).ready(function() {
             responsiveClass: true,
             dots: false,
             nav: false,
-            autoplay: true,
+            autoplay: false,
             navText: ['<i class="fas fa-arrow-left"></i>', '<i class="fas fa-arrow-right"></i>', ],
             lazyLoad: true,
             responsive: {
@@ -185,17 +185,17 @@ jQuery(document).ready(function() {
     $('.slider__image').owlCarousel({
         loop: true,
         // spaceBetween: 10,
-        center: true,
+        // center: true,
         responsiveClass: true,
         dots: false,
         navText: ['<i class="fas fa-arrow-left"></i>', '<i class="fas fa-arrow-right"></i>', ],
         nav: true,
         responsive: {
             0: {
-                items: 3,
+                items: 2,
                 nav: false
             },
-            576: {
+            768: {
                 items: 4,
                 nav: false
             },
@@ -291,7 +291,19 @@ jQuery(document).ready(function() {
             alignOrigin: [0.5, 0.5],
             start: -.15
         },
-        duration: 100,
+        duration: 300,
+        repeat: -1
+    })
+
+    gsap.to(".dots1", {
+        motionPath: {
+            path: "#crcl-1",
+            align: "#crcl-1",
+            autoRotate: true,
+            alignOrigin: [0.5, 0.5],
+            start: -.40
+        },
+        duration: 500,
         repeat: -1
     })
     gsap.to(".c-2", {
@@ -303,9 +315,11 @@ jQuery(document).ready(function() {
             start: 0.25,
             end: 1.25
         },
-        duration: 100,
+        duration: 300,
         repeat: -1
     })
+
+
 
     gsap.to(".c-3", {
         motionPath: {
@@ -316,20 +330,44 @@ jQuery(document).ready(function() {
             start: 0.50,
             end: 1.50
         },
-        duration: 100,
+        duration: 300,
 
         repeat: -1
     })
+    gsap.to(".dots2", {
+        motionPath: {
+            path: "#crcl-2",
+            align: "#crcl-2",
+            autoRotate: true,
+            alignOrigin: [0.5, 0.5],
+            start: 1,
+            end: 1.5
+        },
+        duration: 400,
+        repeat: -1
+    })
     gsap.to(".C-4", {
+        motionPath: {
+            path: "#crcl-3",
+            align: "#crcl-3",
+            autoRotate: true,
+            alignOrigin: [0.5, 0.5],
+            start: 0.75,
+            end: 1.75
+        },
+        duration: 300,
+        repeat: -1
+    })
+    gsap.to(".dots3", {
             motionPath: {
                 path: "#crcl-3",
                 align: "#crcl-3",
                 autoRotate: true,
                 alignOrigin: [0.5, 0.5],
-                start: 0.75,
-                end: 1.75
+                start: 0.25,
+                end: 1
             },
-            duration: 100,
+            duration: 400,
             repeat: -1
         })
         // Circle Animation
@@ -342,12 +380,18 @@ jQuery(document).ready(function() {
         type: 'iframe'
     });
 
+    // popup
+
+
+
+
 
     // $('#subject').niceSelect();
 
     var swiper = new Swiper(".studentSay", {
         slidesPerView: 3,
         slidesPerGroup: 1,
+        centeredSlides: true,
         loop: true,
         loopFillGroupWithBlank: true,
         pagination: {
@@ -381,37 +425,37 @@ jQuery(document).ready(function() {
 
 
     // course Swiper
-    var swiper = new Swiper(".courseSwiper", {
-        direction: "vertical",
-        freeMode: true,
-        slidesToScroll: 1,
-        watchSlidesProgress: true,
-        breakpoints: {
-            // when window width is >= 320px
-            320: {
-                slidesPerView: 3,
-            },
-            // when window width is >= 480px
-            768: {
-                slidesPerView: 3,
-                spaceBetween: 30
-            },
-            // when window width is >= 640px
-            1024: {
-                slidesPerView: 6,
-                spaceBetween: 40
-            }
-        }
-    });
-    var swiper = new Swiper(".courseContentSwiper", {
-        loop: true,
-        autoplay: true,
+    // var swiper = new Swiper(".courseSwiper", {
+    //     direction: "vertical",
+    //     freeMode: true,
+    //     slidesToScroll: 1,
+    //     watchSlidesProgress: true,
+    //     breakpoints: {
+    //         // when window width is >= 320px
+    //         320: {
+    //             slidesPerView: 3,
+    //         },
+    //         // when window width is >= 480px
+    //         768: {
+    //             slidesPerView: 3,
+    //             spaceBetween: 30
+    //         },
+    //         // when window width is >= 640px
+    //         1024: {
+    //             slidesPerView: 6,
+    //             spaceBetween: 40
+    //         }
+    //     }
+    // });
+    // var swiper = new Swiper(".courseContentSwiper", {
+    //     loop: true,
+    //     autoplay: true,
+    //     loopFillGroupWithBlank: true,
+    //     thumbs: {
+    //         swiper: swiper,
+    //     },
 
-        loopFillGroupWithBlank: true,
-        thumbs: {
-            swiper: swiper,
-        }
-    });
+    // });
 
 
     $('.nav__name').on('click', function(e) {
@@ -422,96 +466,104 @@ jQuery(document).ready(function() {
     })
 
 
-    // count Down
-    function getTimeRemaining(endtime) {
-        var t = Date.parse(endtime) - Date.now();
-        var seconds = Math.floor((t / 1000) % 60);
-        var minutes = Math.floor((t / 1000 / 60) % 60);
-        var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
-        var days = Math.floor(t / (1000 * 60 * 60 * 24));
-        return {
-            'total': t,
-            'days': days,
-            'hours': hours,
-            'minutes': minutes,
-            'seconds': seconds
-        };
-    }
 
-    function initializeClock(id, endtime) {
-        var clock = document.getElementById(id);
-        var daysSpan = clock.querySelector('.days');
-        var hoursSpan = clock.querySelector('.hours');
-        var minutesSpan = clock.querySelector('.minutes');
-        var secondsSpan = clock.querySelector('.seconds');
-
-        function updateClock() {
-            var t = getTimeRemaining(endtime);
-
-            daysSpan.innerHTML = t.days;
-            hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
-            minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-            secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-
-            if (t.total <= 0) {
-                clearInterval(timeinterval);
-            }
-        }
-
-        updateClock();
-        var timeinterval = setInterval(updateClock, 1000);
-    }
-    // count down timer:
-    var deadline = new Date(Date.now() + 1 * 30 * 60 * 60 * 1000);
-
-    initializeClock('clockdiv', deadline);
-
-
-
-
-
-    // Course carousel
-
-    // Course section
-    var owl = $('.course-content');
-    owl.owlCarousel({
-        loop: true,
-        margin: 40,
-        responsiveClass: true,
-        dots: false,
-        autoplay: false,
-        nav: false,
-        lazyLoad: true,
-        items: 3,
-        center: true,
-        responsive: {
-            0: {
-                items: 1,
-                nav: false
+    $('.course-content').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: false,
+        autoplay: true,
+        asNavFor: '.course-sidebar',
+        responsive: [{
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
             },
-            768: {
-                items: 2,
-                nav: false
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
             },
-            1024: {
-                items: 3,
-                loop: true
+            {
+                breakpoint: 575,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
             }
-        },
-
+        ]
     });
-    owl.on('changed.owl.carousel', function() {
-        id = $('.course-content .owl-item.active section')[1].getAttribute('id');
-        const sections = document.querySelectorAll('.course-content section[id]')
-        sections.forEach(current => {
-            sectionId = current.getAttribute('id')
-            if (id == sectionId) {
-                document.querySelector('.course-sidebar a[href*=' + sectionId + ']').classList.add('active-link')
-            } else {
-                document.querySelector('.course-sidebar a[href*=' + sectionId + ']').classList.remove('active-link')
-            }
-        })
-    })
+
+    $('.course-sidebar').slick({
+        vertical: true,
+        verticalSwiping: true,
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        asNavFor: '.course-content',
+        dots: false,
+        autoplay: true,
+        arrows: false,
+        lazyLoad: 'ondemand',
+        centerMode: true,
+        focusOnSelect: true
+    });
+
+
+
+
+
+
+
+    // $('.video2').magnificPopup({
+    //     type: 'iframe',
+    //     _legacyUndefinedCheck: true,
+    //     iframe: {
+    //         markup: '<div class="mfp-iframe-scaler">' +
+    //             '<div class="mfp-close"></div>' +
+    //             '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
+    //             '</div>', // HTML markup of popup, `mfp-close` will be replaced by the close button
+
+    //         patterns: {
+    //             youtube: {
+    //                 index: 'youtube.com/',
+    //                 id: function(url) {
+    //                     var m = url.match(/^.+youtube.com\/(video|hub)\/([^_]+)[^#]*(#video=([^_&]+))?/);
+    //                     if (m !== null) {
+    //                         if (m[4] !== undefined) {
+
+    //                             return m[4];
+    //                         }
+    //                         return m[2];
+    //                     }
+    //                     return null;
+    //                 },
+    //                 src: 'https://www.youtube.com/embed/%id%?autoplay=1'
+    //             },
+    //         },
+    //         srcAction: 'iframe_src',
+    //     }
+
+
+    // });
+
+    // $('.video2').magnificPopup({
+    //     items: {
+    //         src: 'https://www.youtube.com/watch?v=124qhYkJG2w'
+    //     },
+    //     type: 'iframe'
+    // });
+
+
+
+
+
+
 
 
 

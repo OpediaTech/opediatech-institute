@@ -410,16 +410,16 @@ ul {
 
 .header {
     position: fixed;
-    top: 32px;
+    top: 0;
     left: 0;
     width: 100%;
     background-color: var(--container-color);
     z-index: 9999;
     transition: .4s;
-    padding: 3rem 0;
+    padding: 2rem 0;
     transition: .3s;
     display: none;
-    padding-top: 2rem;
+    padding-top: 3rem;
 }
 
 .header-show {
@@ -487,10 +487,11 @@ ul {
     font-size: 1.5rem;
 }
 
-a.nav__logo img {
+
+/* a.nav__logo img {
     height: 5rem;
     width: 5r;
-}
+} */
 
 
 /*Active link*/
@@ -499,6 +500,10 @@ a.nav__logo img {
     position: relative;
     color: var(--color-1);
     transition: .3s;
+}
+
+.active-link-color {
+    color: var(--color-1) !important;
 }
 
 
@@ -682,12 +687,14 @@ img.hero-utils {
 .hero-img img {
     height: 53em;
     width: 68.5em;
+    transform: scale(1.1);
 }
 
-.hero-img {
+
+/* .hero-img {
     margin-top: -65px;
     margin-left: -15px;
-}
+} */
 
 
 /* *************************************HERO SECTION ENDS ********************************** */
@@ -909,7 +916,7 @@ ul.section-list li a {
     border: none;
     position: relative;
     transition: .3s;
-    width: 348px !important;
+    max-width: 348px !important;
 }
 
 .course-wrap .card-body {
@@ -984,7 +991,6 @@ ul.section-list li a {
     display: flex;
     flex-direction: column;
     margin-top: 2.4em;
-    margin-bottom: 2rem;
 }
 
 p.details-content {
@@ -1238,10 +1244,6 @@ ul.course-list li:hover:before {
     cursor: pointer;
 }
 
-.course-content .owl-stage-outer {
-    margin-left: -40px !important;
-}
-
 
 /* swiper */
 
@@ -1257,6 +1259,25 @@ ul.course-list li:hover:before {
     display: flex;
     justify-content: end;
     align-items: flex-end;
+    flex-direction: column;
+}
+
+.count-down strong {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(13, 41, 62, 0.9);
+}
+
+span#countDown {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    background: linear-gradient(180deg, #FF5050 0%, #FF0C0C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
 }
 
 .count-down div {
@@ -1739,7 +1760,7 @@ ol.breadcrumb li a {
 
 .course-wrap {
     transition: .3s;
-    margin-left: 8px;
+    margin-left: 0;
     padding: 16px 0;
 }
 
@@ -1781,6 +1802,23 @@ ol.breadcrumb li a {
     margin-bottom: 28px;
 }
 
+.course-content .slick-list {
+    margin-right: -98px;
+}
+
+.course-content .slick-slide {
+    margin: 0 7px;
+}
+
+.course-content .slick-slide.slick-current.slick-active {
+    transform: scale(1.05);
+    transition: .3s;
+}
+
+.course-short-modal.market.activity {
+    display: block !important;
+}
+
 
 /* ====================================
     course page end here
@@ -1799,6 +1837,10 @@ ol.breadcrumb li a {
     background-color: none !important;
     border-color: none !important;
 } */
+
+.course-section .slick-list.draggable {
+    padding-top: 0 !important;
+}
 
 .course-section .list-group-item.active {
     background-color: transparent;
@@ -1876,17 +1918,17 @@ ol.breadcrumb li a {
     padding-left: 35px;
 }
 
-a.list-group-item.active-link:before {
+.slick-slide.slick-current.slick-center .list-group-item:before {
     visibility: visible;
     opacity: 1;
     left: 0;
 }
 
-a.list-group-item.active-link img {
+.slick-slide.slick-current.slick-center img {
     display: inline-block;
 }
 
-a.list-group-item.active-link {
+.slick-slide.slick-current.slick-center .list-group-item {
     padding-left: 35px;
 }
 
@@ -1957,6 +1999,7 @@ ul.date-activites li {
     line-height: 2.1rem;
     color: #C4C4C4;
     margin-bottom: .5rem;
+    text-align: left;
 }
 
 ul.date-activites li span {
@@ -2005,7 +2048,7 @@ ul.date-activites li span {
 
 .activities-4-wrap .swiper {
     height: 650px !important;
-    padding-bottom: 27px;
+    padding-bottom: 16px;
 }
 
 .activities-4-wrap .swiper-scrollbar {
@@ -2154,6 +2197,10 @@ span.ac-date {
     position: relative;
 }
 
+.upcoming-section {
+    margin-top: 124px;
+}
+
 .featured-img-text .ac-f-title:first-child:after {
     position: absolute;
     content: '';
@@ -2211,6 +2258,14 @@ span.ac-date {
     height: 20.7rem;
 }
 
+.activities-page .modal-dialog {
+    max-width: 0 !important;
+}
+
+.activities-page .modal-dialog-centered {
+    min-height: calc(100% - 25.5rem) !important;
+}
+
 .activities-section.activities-page .owl-nav {
     position: absolute;
     left: 93%;
@@ -2218,9 +2273,10 @@ span.ac-date {
 }
 
 .activities-page .owl-carousel .owl-stage-outer {
-    height: 66rem;
+    height: 50rem;
     width: 102%;
-    padding-top: 60px;
+    padding-top: 75px;
+    transition: .3s;
 }
 
 
@@ -2381,6 +2437,11 @@ a.more {
     top: -70px;
 }
 
+
+/* .course-short-modal.market.activity {
+    display: block;
+} */
+
 .marketplace-title img:hover~.course-short-modal.market {
     display: block;
 }
@@ -2429,7 +2490,7 @@ a.more {
 }
 
 .marketplace-section .owl-item.active.center {
-    transform: scale(1.05);
+    transform: scale(1.1);
     transition: .4s;
 }
 
@@ -2750,6 +2811,10 @@ img.c-2 {
 
 .test-person-details {
     margin-left: 2.5em;
+}
+
+.testimonial_dots img {
+    width: 24px;
 }
 
 .test-person-details h5 {
@@ -3126,6 +3191,7 @@ h2.partnar-top {
     height: 404px;
     max-width: 620px;
     line-height: 27px;
+    padding-top: 42px;
 }
 
 .facility__box.text-center {
@@ -3235,10 +3301,19 @@ a.see-video {
     margin: 25px 20px;
 }
 
-.facility__section .swiper-slide.swiper-slide-duplicate.swiper-slide-next .slider__box {
+.swiper-slide {
+    transition: all 200ms linear;
+}
+
+.studentSay .swiper-slide.swiper-slide-active {
+    transform: scale(1.2);
+}
+
+
+/* .facility__section .swiper-slide.swiper-slide-duplicate.swiper-slide-next .slider__box {
     transform: scale(1.15);
     transition: .3s;
-}
+} */
 
 .facility__section .swiper {
     width: 100%;
@@ -3579,7 +3654,6 @@ p.c_desc {
     font-weight: 600;
     font-size: 20px;
     line-height: 24px;
-    text-transform: capitalize;
     color: rgba(13, 41, 62, 0.9);
     margin-bottom: 0;
 }
@@ -4218,8 +4292,13 @@ img.ifram-main {
     width: 230px !important;
 }
 
-.slider__section .owl-carousel .owl-item {
+
+/* .slider__section .owl-carousel .owl-item {
     width: 250px !important;
+} */
+
+.slider__section .owl-carousel .owl-stage-outer {
+    padding-left: 30px !important;
 }
 
 @media screen and (max-width: 1023px) {}

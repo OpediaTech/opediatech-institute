@@ -151,12 +151,26 @@
         width: 35%;
         left: 0;
     }
+    .our__gallery__inner .slider__image {
+        height: 26em;
+    }
+    .slider__section button.owl-prev {
+        left: 0 !important;
+        top: 90% !important;
+    }
+    .slider__section button.owl-next {
+        right: 0 !important;
+        top: 90% !important;
+    }
     /* ACTIVITIES SECTION */
     .activities-title-wrap h4 {
         font-size: 1.8rem;
     }
     .activities-bottom p {
         font-size: 2rem;
+    }
+    .facility__section {
+        margin: 110px 0 200px;
     }
     /* FACILITIES */
     .facilities-section .section-title p {
@@ -208,6 +222,11 @@
         padding: 7rem 0 7rem;
         padding-bottom: 3rem;
     }
+    ul.course-sidebar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
     /* FOOTER */
     .footer__top {
         padding: 100px 0;
@@ -241,10 +260,29 @@
         font-size: 16px;
     }
     .overview__course__details {
-        padding: 40px 25px 56px;
+        padding: 28px 22px 26px;
+        margin-right: 10px;
     }
     .overview__course__details .title h4 {
-        font-size: 27px;
+        font-size: 20px;
+    }
+    .overview__course__details .enroll__quate h4 {
+        font-size: 20px;
+    }
+    .overview__course__details .enroll__quate button {
+        font-size: 17px;
+        padding: 10px;
+        width: 195px;
+    }
+    .overview__course__details .details__list ul li {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .career-opportunity-item {
+        text-align: center;
+    }
+    .career-opportunity-item img {
+        width: 40px;
     }
     p.mentor_name {
         top: 48%;
@@ -257,7 +295,10 @@
     }
     .overview .overview__title h4,
     .overview .overview__module h4 {
-        font-size: 30px;
+        font-size: 28px;
+    }
+    .overview .overview__title p {
+        margin: 20px 0 45px;
     }
     .course_details_hero img.youtube {
         width: 10rem;
@@ -281,6 +322,48 @@
     .scroll-up {
         bottom: 0;
         right: 0
+    }
+    img.bulb {
+        top: -86px;
+        width: 200px;
+        height: 200px;
+        left: -55px;
+    }
+    .partner__section .section-title h2:after {
+        width: 167px;
+    }
+    .google-vr-section {
+        max-width: 90%;
+        margin: auto;
+    }
+    .course-wrap.c_wrap_page .card {
+        width: 100% !important;
+    }
+    h2.course-title {
+        font-size: 40px;
+    }
+    .course-bnner-title-wrap p {
+        font-size: 20px;
+    }
+    .course-info-item h5 {
+        font-size: 22px;
+    }
+    .course-info-item span {
+        font-size: 30px;
+    }
+    .course-info-item {
+        height: 152px;
+        margin: 0px 40px;
+    }
+    a.see-video {
+        bottom: 3%;
+        font-size: 20px;
+    }
+    .course-breadcrumb {
+        bottom: 8px;
+    }
+    .course-details-items-wrapper {
+        margin-top: 50px;
     }
 }
 
@@ -348,6 +431,10 @@
     }
     .about-opedia-section {
         padding-top: 5em;
+    }
+    .hero-section.facilities .hero-img {
+        margin-top: 0;
+        margin-left: 0;
     }
     /* COURSE SECTION */
     ul.course-list {
@@ -635,6 +722,9 @@
     .signIn-section .info-form {
         padding: 40px 1px;
     }
+    .social_list img {
+        width: 4em;
+    }
 }
 
 
@@ -856,7 +946,7 @@
     }
     img.location_contact {
         right: 10%;
-        top: 25%;
+        top: 43%;
         width: 2.5em;
     }
     .registration-section .next-btn {
@@ -882,6 +972,9 @@
     }
     .scroll-up {
         bottom: 10%;
+    }
+    .course-content .owl-stage-outer {
+        margin-left: 16% !important;
     }
 }
 
@@ -913,10 +1006,13 @@
         top: 0;
     }
     .course-bottom-item:nth-child(1):after {
-        right: -2rem;
+        display: none;
     }
     .course-bottom-item:nth-child(2):after {
-        right: -2rem;
+        display: none;
+    }
+    .course-wrap .card {
+        width: 310px !important;
     }
     .course-bottom-item img {
         width: 6rem;
@@ -1095,6 +1191,19 @@
     .marketplace-section .section-title h2:after {
         width: 230px;
     }
+    .course-content .owl-stage-outer {
+        margin-left: 4% !important;
+    }
+    .hero-left-content h1 span {
+        font-size: 3rem;
+    }
+    .hero-left-content h1 {
+        font-size: 3.5rem;
+        line-height: 5rem;
+    }
+    .hero-left-content h2 {
+        font-size: 2rem;
+    }
 }
 
 @media screen and (max-width: 424px) {
@@ -1268,6 +1377,10 @@
     }
     .signIn-section .title-signin {
         font-size: 37px;
+    }
+    img.location_contact {
+        top: 38%;
+        width: 2em;
     }
 }
 
