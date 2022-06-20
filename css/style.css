@@ -333,6 +333,16 @@ label {
 
 	font-family: 'Poppins', sans-serif;*/
 
+.modal.player .modal-content {
+    padding: 0;
+}
+
+.modal.player .modal-body {
+    padding: 0;
+    height: 400px;
+    width: 700px;
+}
+
 
 /*=============== VARIABLES CSS ===============*/
 
@@ -2515,6 +2525,15 @@ button.owl-next i {
     color: #fff;
 } */
 
+img.ytbImg {
+    position: absolute;
+    width: 120px !important;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
 
 /* *************************************MARKETPLACE ENDS ********************************** */
 
@@ -4261,10 +4280,11 @@ img.ifram-main {
     position: relative;
 }
 
-.iframe__image.last__child .image img:last-child {
+
+/* .iframe__image.last__child .image img:last-child {
     max-width: 64px;
     height: 64px;
-}
+} */
 
 .iframe__image.last__child .image {
     position: relative;
@@ -4292,10 +4312,25 @@ img.ifram-main {
     width: 230px !important;
 }
 
+.image.image__up img.imgup_ytb {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    cursor: pointer;
+    height: 70px
+}
 
-/* .slider__section .owl-carousel .owl-item {
-    width: 250px !important;
-} */
+.image img.imgup_ytb {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    cursor: pointer;
+    height: 70px
+}
 
 .slider__section .owl-carousel .owl-stage-outer {
     padding-left: 30px !important;

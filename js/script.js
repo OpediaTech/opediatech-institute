@@ -562,10 +562,8 @@ jQuery(document).ready(function() {
 
 
 
-
-
-
-
-
+    $(".player").on('hidden.bs.modal', function(e) {
+        $(".player iframe").attr("src", $(".player iframe").attr("src"));
+    });
 
 })
