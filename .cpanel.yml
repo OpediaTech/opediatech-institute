@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/opedxpla/opediaitinstitute.com/
+    - /bin/cp * $DEPLOYPATH
