@@ -868,6 +868,9 @@ ul.section-list li a {
 
 
 /* *************************************COURSE STARTS ********************************** */
+/* div#courses{
+    display: none;
+} */
 
 .course-section .section-title h2:after {
     width: 232px;
@@ -1329,6 +1332,8 @@ span#countDown {
     line-height: 27px;
     color: rgba(13, 41, 62, 0.9);
 }
+
+
 
 
 /* ====================================
@@ -3209,6 +3214,7 @@ h2.partnar-top {
     padding: 32px;
     height: 404px;
     max-width: 620px;
+    margin: auto;
     line-height: 27px;
     padding-top: 42px;
 }
@@ -4386,3 +4392,211 @@ img.ifram-main {
 
 
 /* *************************************HEADER ENDS ********************************** */
+
+
+
+
+
+
+
+
+
+
+/* -----mine res----- */
+@media screen and (max-width: 1439px) {
+    .hero-section.facilities .hero-img {
+        margin-top: 0;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .slider__section .owl-nav button.owl-next {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .slick-track {
+        display: flex;
+    }
+
+    ul.course-sidebar.slick-initialized.slick-slider.slick-vertical .slick-list.draggable {
+        height: 150px !important;
+    }
+
+    a.list-group-item {
+        padding-left: 0 !important;
+        font-size: 20px !important;
+    }
+
+    .slick-slide.slick-current.slick-center img{
+        display: none !important;
+    }
+
+    .slick-slide.slick-current.slick-center .list-group-item:before{
+        display: none;
+    }
+
+    .slick-slide.slick-current.slick-center .list-group-item {
+        color: var(--color-1) !important;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .section-title p {
+        padding-right: 0;
+        text-align: justify;
+    }
+
+    .our__gallery__inner .title h1, .our__gallery__inner .title h1 span {
+        font-size: 40px;
+    }
+
+    ul.section-list {
+        padding-right: 0;
+    }
+
+    /* .section-btn-wrap.pt-5 {
+        text-align: center;
+    }
+
+    .section-title2 p {
+        text-align: justify !important;
+    } */
+
+    .activities-page .course-short-modal.market {
+        left: 2.5rem !important;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .hero-section.activities .hero-imgs img {
+        width: 100%;
+    }
+
+    .activities-page .course-short-modal.market {
+        left: 100px !important;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .section-title h2{
+        display: block !important;
+        text-align: center !important;
+    }
+
+    .teacher-section .section-title h2:after {
+        right: 19%;
+    }
+
+    .section-title h2:after{
+        right: 32%;
+    }
+
+    .footer__top {
+        padding: 60px 0;
+    }
+
+    .footer__dimen .Dimen__logo {
+        text-align: center !important;
+    }
+
+    .dimen__title {
+        text-align: center !important;
+    }
+
+    .triton__social {
+        width: 75%;
+        margin: auto;
+    }
+
+    .footer__triton .triton__title {
+        text-align: center;
+    }
+
+    .triton__contact {
+        text-align: center;
+    }
+
+    .hero-section {
+        padding-top: 7em !important;
+    }
+
+    .facility__section {
+        margin: 0 !important;
+    }
+
+    .section-title.text-center p {
+        margin-bottom: -125px;
+    }
+
+    .marketplace-section .owl-carousel .owl-stage-outer {
+        padding-top: 20rem !important;
+    }
+    
+    .course-short-modal.market {
+        top: -192px !important;
+        left: 9% !important;
+    }
+
+    /* .activities-page .owl-carousel .owl-stage-outer {
+        padding-top: 199px;
+    } */
+
+    .activities-page .owl-carousel .owl-stage-outer {
+        padding-top: 87px;
+    }
+
+    .activities-page .course-short-modal.market.activity {
+        left: 64px !important;
+    }
+
+    .activities-4-wrap .card img {
+        width: 100%;
+    }
+
+
+}
+
+@media screen and (max-width: 424px) {
+    .section-title h2:after {
+        right: 27%;
+    }
+
+    .activities-page .course-short-modal.market.activity {
+        left: 38px !important;
+    }
+
+    .activities-page .course-short-modal.market {
+        left: 65px !important;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .section-title h2:after {
+        right: 20%;
+    }
+
+    .btn-second {
+        padding: 0.7em 0em;
+    }
+
+    .hero-action a {
+        width: 44%;
+    }
+
+    .activities-page .course-short-modal.market.activity {
+        left: 15px !important;
+    }
+
+    .activities-page .course-short-modal.market {
+        left: 11px !important;
+    }
+}
+/* -----mine res----- */
+
+
+
+
+
+
