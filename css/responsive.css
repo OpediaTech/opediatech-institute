@@ -527,9 +527,12 @@
     .section-title2 p {
         text-align: center;
     }
+    .section-title2.provide {
+        text-align: center;
+    }
     .section-title2.provide h2 span:after {
         width: 65%;
-        left: 0;
+        left: 18%;
     }
     .hero-section {
         padding-top: 13em;
@@ -586,9 +589,11 @@
     }
     .activities-page .course-short-modal.market .course-details-wrap {
         width: 28.3rem;
+        margin: 100px 0;
     }
     .activities-page .course-short-modal.market.activity {
-        left: 0;
+        /* left: 0; */
+        left: -133px;
     }
     .activities-page .owl-carousel .owl-stage-outer {
         height: 62rem;
@@ -1043,7 +1048,8 @@
     }
     /* MARKET SECTION */
     .course-short-modal.market {
-        left: 0;
+        /* left: 0; */
+        left: 24px;
     }
     .student-project-section .section-title h2:after {
         right: 50%;
