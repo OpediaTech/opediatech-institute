@@ -1,37 +1,9 @@
-$(window).on('load', function() {
-    $("#loader-wrapper").delay(500).fadeOut(500);
-});
 jQuery(document).ready(function() {
 
     //   Courese section
     function setDots() {
         $(".owl-dots").removeClass('disabled');
     }
-    // $('.activiteis-wrap').owlCarousel({
-    //         loop: true,
-    //         margin: 40,
-    //         responsiveClass: true,
-    //         dots: false,
-    //         nav: true,
-    //         navText: ['<i class="fas fa-arrow-left"></i>', '<i class="fas fa-arrow-right"></i>', ],
-    //         lazyLoad: true,
-    //         responsive: {
-    //             0: {
-    //                 items: 1,
-    //                 nav: false
-    //             },
-    //             768: {
-    //                 items: 2,
-    //                 nav: false
-    //             },
-    //             1024: {
-    //                 items: 3,
-    //                 loop: true
-    //             }
-    //         },
-    //         onInitialized: setDots,
-    //         onChanged: setDots
-    //     })
     // RECENT ACTIVITY
     $('.recent-activity').owlCarousel({
             loop: true,
@@ -422,47 +394,10 @@ jQuery(document).ready(function() {
 
 
 
-
-
-    // course Swiper
-    // var swiper = new Swiper(".courseSwiper", {
-    //     direction: "vertical",
-    //     freeMode: true,
-    //     slidesToScroll: 1,
-    //     watchSlidesProgress: true,
-    //     breakpoints: {
-    //         // when window width is >= 320px
-    //         320: {
-    //             slidesPerView: 3,
-    //         },
-    //         // when window width is >= 480px
-    //         768: {
-    //             slidesPerView: 3,
-    //             spaceBetween: 30
-    //         },
-    //         // when window width is >= 640px
-    //         1024: {
-    //             slidesPerView: 6,
-    //             spaceBetween: 40
-    //         }
-    //     }
-    // });
-    // var swiper = new Swiper(".courseContentSwiper", {
-    //     loop: true,
-    //     autoplay: true,
-    //     loopFillGroupWithBlank: true,
-    //     thumbs: {
-    //         swiper: swiper,
-    //     },
-
-    // });
-
-
     $('.nav__name').on('click', function(e) {
         let link = $('.nav__name');
         link.removeClass('active');
         $(this).addClass('active')
-
     })
 
 
@@ -484,7 +419,7 @@ jQuery(document).ready(function() {
                 }
             },
             {
-                breakpoint: 768,
+                breakpoint: 992,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2
@@ -517,53 +452,16 @@ jQuery(document).ready(function() {
 
 
 
-
-
-
-    // $('.video2').magnificPopup({
-    //     type: 'iframe',
-    //     _legacyUndefinedCheck: true,
-    //     iframe: {
-    //         markup: '<div class="mfp-iframe-scaler">' +
-    //             '<div class="mfp-close"></div>' +
-    //             '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
-    //             '</div>', // HTML markup of popup, `mfp-close` will be replaced by the close button
-
-    //         patterns: {
-    //             youtube: {
-    //                 index: 'youtube.com/',
-    //                 id: function(url) {
-    //                     var m = url.match(/^.+youtube.com\/(video|hub)\/([^_]+)[^#]*(#video=([^_&]+))?/);
-    //                     if (m !== null) {
-    //                         if (m[4] !== undefined) {
-
-    //                             return m[4];
-    //                         }
-    //                         return m[2];
-    //                     }
-    //                     return null;
-    //                 },
-    //                 src: 'https://www.youtube.com/embed/%id%?autoplay=1'
-    //             },
-    //         },
-    //         srcAction: 'iframe_src',
-    //     }
-
-
-    // });
-
-    // $('.video2').magnificPopup({
-    //     items: {
-    //         src: 'https://www.youtube.com/watch?v=124qhYkJG2w'
-    //     },
-    //     type: 'iframe'
-    // });
-
-
-
-
     $(".player").on('hidden.bs.modal', function(e) {
         $(".player iframe").attr("src", $(".player iframe").attr("src"));
+    });
+
+    $(".player1").on('hidden.bs.modal', function(e) {
+        $(".player iframe").attr("src", $(".player1 iframe").attr("src"));
+    });
+
+    $(".player2").on('hidden.bs.modal', function(e) {
+        $(".player iframe").attr("src", $(".player2 iframe").attr("src"));
     });
 
 })

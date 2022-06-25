@@ -343,6 +343,16 @@ label {
     width: 700px;
 }
 
+.modal.modalYoutube .modal-content {
+    padding: 0;
+}
+
+.modal.modalYoutube .modal-body {
+    padding: 0;
+    height: 400px;
+    width: 700px;
+}
+
 
 /*=============== VARIABLES CSS ===============*/
 
@@ -797,6 +807,7 @@ ul.section-list li a {
 
 .about-sml img {
     height: inherit;
+    border-radius: 0.8rem;
 }
 
 .about-sml-btm img {
@@ -861,6 +872,7 @@ ul.section-list li a {
 
 .about-big img {
     height: inherit;
+    border-radius: 0.8rem
 }
 
 
@@ -868,6 +880,8 @@ ul.section-list li a {
 
 
 /* *************************************COURSE STARTS ********************************** */
+
+
 /* div#courses{
     display: none;
 } */
@@ -1176,7 +1190,7 @@ ul.course-list li:hover:before {
     content: '';
     height: 100%;
     width: .2rem;
-    right: -20rem;
+    right: -15rem;
     width: .2rem;
     height: 7.9rem;
     background: rgba(166, 171, 189, 0.5);
@@ -1191,7 +1205,7 @@ ul.course-list li:hover:before {
     content: '';
     height: 100%;
     width: .2rem;
-    right: -20rem;
+    right: -15rem;
     width: .2rem;
     height: 7.9rem;
     background: rgba(166, 171, 189, 0.5);
@@ -1332,8 +1346,6 @@ span#countDown {
     line-height: 27px;
     color: rgba(13, 41, 62, 0.9);
 }
-
-
 
 
 /* ====================================
@@ -1826,7 +1838,7 @@ ol.breadcrumb li a {
 }
 
 .course-content .slick-slide.slick-current.slick-active {
-    transform: scale(1.05);
+    transform: scaleY(1.05);
     transition: .3s;
 }
 
@@ -3003,7 +3015,7 @@ p.seat-book-text {
 }
 
 .partner__section .section-title h2:after {
-    width: 278px;
+    width: 280px;
 }
 
 .partners__logo img {
@@ -3013,6 +3025,8 @@ p.seat-book-text {
 
 .section-title h2.partnar-top:after {
     top: 0;
+    right: 2px;
+    width: 270px;
 }
 
 h2.partnar-top {
@@ -3663,8 +3677,12 @@ p.mentor_name {
 
 .fn-icon {
     font-size: 25px;
-    margin-right: 7px;
+    margin-right: 10px;
     color: #0D293EE5;
+}
+
+.location .fn-icon {
+    margin-right: 26px;
 }
 
 p.c_desc {
@@ -3823,7 +3841,7 @@ img.location_contact {
 }
 
 .registration-section .form-check-input:checked {
-    background-color: #cdcdcd !important;
+    background-color: var(--color-1) !important;
     border-color: #C4C4C4 !important;
 }
 
@@ -3831,6 +3849,10 @@ img.location_contact {
     border-color: #C4C4C4 !important;
     outline: 0;
     box-shadow: 0 0 0 0.25rem rgba(153, 153, 153, 0.25) !important;
+}
+
+.form-align .form-check {
+    margin-right: 40px;
 }
 
 .registration-section .form-select:focus {
@@ -4394,22 +4416,14 @@ img.ifram-main {
 /* *************************************HEADER ENDS ********************************** */
 
 
-
-
-
-
-
-
-
-
 /* -----mine res----- */
+
 @media screen and (max-width: 1439px) {
     .hero-section.facilities .hero-img {
         margin-top: 0;
         margin-left: 0;
         width: 100%;
     }
-
     .slider__section .owl-nav button.owl-next {
         display: none;
     }
@@ -4419,24 +4433,19 @@ img.ifram-main {
     .slick-track {
         display: flex;
     }
-
     ul.course-sidebar.slick-initialized.slick-slider.slick-vertical .slick-list.draggable {
         height: 150px !important;
     }
-
     a.list-group-item {
         padding-left: 0 !important;
         font-size: 20px !important;
     }
-
-    .slick-slide.slick-current.slick-center img{
+    .slick-slide.slick-current.slick-center img {
         display: none !important;
     }
-
-    .slick-slide.slick-current.slick-center .list-group-item:before{
+    .slick-slide.slick-current.slick-center .list-group-item:before {
         display: none;
     }
-
     .slick-slide.slick-current.slick-center .list-group-item {
         color: var(--color-1) !important;
     }
@@ -4447,15 +4456,13 @@ img.ifram-main {
         padding-right: 0;
         text-align: justify;
     }
-
-    .our__gallery__inner .title h1, .our__gallery__inner .title h1 span {
+    .our__gallery__inner .title h1,
+    .our__gallery__inner .title h1 span {
         font-size: 40px;
     }
-
     ul.section-list {
         padding-right: 0;
     }
-
     /* .section-btn-wrap.pt-5 {
         text-align: center;
     }
@@ -4463,7 +4470,6 @@ img.ifram-main {
     .section-title2 p {
         text-align: justify !important;
     } */
-
     .activities-page .course-short-modal.market {
         left: 2.5rem !important;
     }
@@ -4473,100 +4479,78 @@ img.ifram-main {
     .hero-section.activities .hero-imgs img {
         width: 100%;
     }
-
     .activities-page .course-short-modal.market {
         left: 100px !important;
     }
 }
 
 @media screen and (max-width: 575px) {
-    .section-title h2{
+    .section-title h2 {
         display: block !important;
         text-align: center !important;
     }
-
     .teacher-section .section-title h2:after {
         right: 19%;
     }
-
-    .section-title h2:after{
+    .section-title h2:after {
         right: 32%;
     }
-
     .footer__top {
         padding: 60px 0;
     }
-
     .footer__dimen .Dimen__logo {
         text-align: center !important;
     }
-
     .dimen__title {
         text-align: center !important;
     }
-
     .triton__social {
         width: 75%;
         margin: auto;
     }
-
     .footer__triton .triton__title {
         text-align: center;
     }
-
     .triton__contact {
         text-align: center;
     }
-
     .hero-section {
         padding-top: 7em !important;
     }
-
     .facility__section {
         margin: 0 !important;
     }
-
     .section-title.text-center p {
         margin-bottom: -125px;
     }
-
     .marketplace-section .owl-carousel .owl-stage-outer {
         padding-top: 20rem !important;
     }
-    
     .course-short-modal.market {
         top: -192px !important;
         left: 9% !important;
     }
-
     /* .activities-page .owl-carousel .owl-stage-outer {
         padding-top: 199px;
     } */
-
     .activities-page .owl-carousel .owl-stage-outer {
         padding-top: 87px;
     }
-
     .activities-page .course-short-modal.market.activity {
         left: 64px !important;
     }
-
     .activities-4-wrap .card img {
         width: 100%;
     }
-
-
 }
 
 @media screen and (max-width: 424px) {
     .section-title h2:after {
         right: 27%;
     }
-
     .activities-page .course-short-modal.market.activity {
         left: 38px !important;
     }
-
     .activities-page .course-short-modal.market {
         left: 65px !important;
     }
@@ -4576,27 +4560,19 @@ img.ifram-main {
     .section-title h2:after {
         right: 20%;
     }
-
     .btn-second {
         padding: 0.7em 0em;
     }
-
     .hero-action a {
         width: 44%;
     }
-
     .activities-page .course-short-modal.market.activity {
         left: 15px !important;
     }
-
     .activities-page .course-short-modal.market {
         left: 11px !important;
     }
 }
+
+
 /* -----mine res----- */
-
-
-
-
-
-
