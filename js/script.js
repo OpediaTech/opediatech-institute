@@ -400,6 +400,19 @@ jQuery(document).ready(function() {
         $(this).addClass('active')
     })
 
+    $('.course-sidebar').slick({
+        vertical: true,
+        verticalSwiping: true,
+        slidesToShow: 8,
+        slidesToScroll: 1,
+        asNavFor: '.course-content',
+        dots: false,
+        // autoplay: true,
+        arrows: false,
+        lazyLoad: 'ondemand',
+        centerMode: true,
+        focusOnSelect: true
+    });
 
 
     $('.course-content').slick({
@@ -412,8 +425,8 @@ jQuery(document).ready(function() {
         responsive: [{
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
                     infinite: true,
                     dots: true
                 }
@@ -435,19 +448,6 @@ jQuery(document).ready(function() {
         ]
     });
 
-    $('.course-sidebar').slick({
-        vertical: true,
-        verticalSwiping: true,
-        slidesToShow: 6,
-        slidesToScroll: 1,
-        asNavFor: '.course-content',
-        dots: false,
-        // autoplay: true,
-        arrows: false,
-        lazyLoad: 'ondemand',
-        centerMode: true,
-        focusOnSelect: true
-    });
 
 
 
@@ -464,4 +464,8 @@ jQuery(document).ready(function() {
         $(".player iframe").attr("src", $(".player2 iframe").attr("src"));
     });
 
+})
+
+$(window).on('load', function() {
+    $('.course-content').show();
 })
