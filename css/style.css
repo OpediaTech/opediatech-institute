@@ -682,7 +682,7 @@ img.hero-utils {
     margin-right: 1em;
 }
 
-.hero-left-content p {
+.hero-section.facilities .hero-left-content p {
     margin-top: 3rem;
     margin-bottom: 3.7rem;
     font-style: normal;
@@ -690,6 +690,8 @@ img.hero-utils {
     font-size: 16px;
     line-height: 24px;
     color: rgba(13, 41, 62, 0.6);
+    text-align: justify;
+    direction: rtl;
 }
 
 .hero-left-content h1 img {
@@ -697,6 +699,15 @@ img.hero-utils {
     width: 25.5rem;
     right: 11px;
     bottom: -13px;
+}
+
+.hero-section.facilities .hero-left-content h1 img {
+    position: absolute;
+    width: 25.5rem;
+    right: 11px;
+    bottom: -13px;
+    text-align: left;
+    left: 66px;
 }
 
 .hero-left-content h2 {
@@ -770,12 +781,10 @@ ul.section-list li {
 }
 
 .section-title p {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1.6rem;
-    line-height: 26px;
     color: rgba(13, 41, 62, 0.6);
-    padding-right: 2.3em;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
 }
 
 ul.section-list {
@@ -1880,6 +1889,11 @@ ol.breadcrumb li a {
     padding-top: 0 !important;
 }
 
+.course-sidebar .slick-list.draggable {
+    padding-top: 0 !important;
+    margin-top: -46px;
+}
+
 .course-section .list-group-item.active {
     background-color: transparent;
     border-color: transparent;
@@ -2111,12 +2125,13 @@ ul.date-activites li span {
 
 .activities-4-wrap .card img {
     border-radius: 1.2rem 1.2rem 0 0;
-    width: 435px;
+    width: 100%;
     height: 180px;
 }
 
 .activities-4-wrap .card {
     height: 308px;
+    width: 484px;
 }
 
 .ac-featured-img img {
@@ -2167,7 +2182,7 @@ button.owl-next i {
 }
 
 .activities-section {
-    padding: 6.5rem 0;
+    padding: 6.5rem 0 0;
 }
 
 .activities-section .section-title h2:after {
@@ -2329,7 +2344,7 @@ span.ac-date {
 }
 
 .activities-page .owl-carousel .owl-stage-outer {
-    height: 50rem;
+    height: 55rem;
     width: 102%;
     padding-top: 75px;
     transition: .3s;
@@ -2367,10 +2382,18 @@ a.more {
     margin-left: -76px;
 }
 
+.hero-section.facilities .hero-img img {
+    height: 60em;
+    width: 64em;
+}
+
 .facilities-section .section-title p {
-    text-align: justify;
     padding-right: 3.2rem;
     margin-bottom: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: justify;
 }
 
 .facilities-banner {
@@ -2379,8 +2402,8 @@ a.more {
 
 .section-title2.provide h2 span:after {
     right: 0;
-    width: 57%;
-    left: 43%;
+    width: 39%;
+    left: 60.5%;
 }
 
 
@@ -2490,14 +2513,9 @@ a.more {
     display: none;
     transition: .3s;
     z-index: 99999999999999;
-    left: -.5rem;
+    left: -7rem;
     top: -70px;
 }
-
-
-/* .course-short-modal.market.activity {
-    display: block;
-} */
 
 .marketplace-title img:hover~.course-short-modal.market {
     display: block;
@@ -2537,9 +2555,13 @@ a.more {
 }
 
 .marketplace-section .owl-carousel .owl-stage-outer {
-    padding-top: 8rem !important;
-    height: 58rem !important;
+    padding-top: 17rem !important;
+    height: 76rem !important;
     width: 101% !important;
+}
+
+.marketplace-section .section-title {
+    margin-bottom: -85px;
 }
 
 .course-short-modal.market .course-details-wrap {
@@ -2547,15 +2569,16 @@ a.more {
 }
 
 .marketplace-section .owl-item.active.center {
-    transform: scale(1.3);
+    transform: scale(1.2);
     transition: .4s;
 }
 
 .marketplace-section .owl-nav {
     position: absolute;
-    left: 46.5%;
+    left: 50%;
     transform: translateX(-50%);
-    bottom: 10%;
+    bottom: 21%;
+    z-index: -1;
 }
 
 button.owl-next i {
@@ -2563,13 +2586,6 @@ button.owl-next i {
     border-radius: .4rem;
     color: #fff;
 }
-
-
-/* .owl-nav i:hover {
-    background: var(--liner-gradient);
-    border-radius: .4rem;
-    color: #fff;
-} */
 
 img.ytbImg {
     position: absolute;
@@ -2589,6 +2605,7 @@ img.ytbImg {
 .student-project-section {
     padding: 0 6.5em;
     position: relative;
+    margin-top: -85px;
 }
 
 .student-project-section .section-title h2:after {
@@ -2677,28 +2694,11 @@ span.student-name {
     bottom: -10%
 }
 
-
-/* .student-project-section .owl-nav i {
-    height: 2.4rem;
-    width: 2.4rem;
-    display: inline-block;
-    padding-top: .7rem;
-    margin-right: 1rem;
-    transition: .3s;
-} */
-
 .student-project-section button.owl-next i {
     background: var(--liner-gradient);
     border-radius: .4rem;
     color: #fff;
 }
-
-
-/* .student-project-section .owl-nav i:hover {
-    background: var(--liner-gradient);
-    border-radius: .4rem;
-    color: #fff;
-} */
 
 
 /* *************************************  STUDENT PROJECTS ENDS ********************************** */
@@ -2716,7 +2716,7 @@ span.student-name {
 }
 
 .teacher-section .section-title h2:after {
-    width: 323px;
+    width: 235px;
 }
 
 .teacher-sec-wrap .card-title {
@@ -3215,32 +3215,10 @@ h2.partnar-top {
     opacity: 1;
 }
 
-
-/* .triton__social a img:first-child {
-    margin-bottom: -25px;
-}
-
-.triton__social a img:last-child {
-    opacity: 0;
-    transition: none;
-}
-
-.triton__social a:hover img:last-child {
-    opacity: 1;
-}
-
-.triton__social a:hover img:first-child {
-    margin-bottom: 0;
-    transition: .3s;
-} */
-
 .Dimen__logo img {
     width: 170px;
     width: 28%;
 }
-
-
-/* ---footer foot--- */
 
 
 /* =====footer section end here=====*/
@@ -3379,12 +3357,6 @@ a.see-video {
 .studentSay .swiper-slide.swiper-slide-active {
     transform: scale(1.2);
 }
-
-
-/* .facility__section .swiper-slide.swiper-slide-duplicate.swiper-slide-next .slider__box {
-    transform: scale(1.15);
-    transition: .3s;
-} */
 
 .facility__section .swiper {
     width: 100%;
@@ -3538,13 +3510,6 @@ p.mentor_name {
     width: 95%;
 }
 
-
-/* .mySwiper {
-  
-    box-sizing: border-box;
-    padding: 10px 0;
-} */
-
 .mySwiper .swiper-slide {
     width: 100%;
     height: 100%;
@@ -3567,54 +3532,79 @@ p.mentor_name {
 }
 
 .facilities-img img {
-    width: 322px;
-    height: 290px;
+    width: 100%;
+    height: 100%;
 }
 
 .facilities-img {
     position: relative;
+    width: 322px;
+    height: 290px;
+}
+
+.facilities-img p {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    text-align: justify;
+    color: #FFFFFF;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 88;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
 }
 
 .facilities-img span {
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 32px;
+    display: block;
+    text-align: center;
+    line-height: 1.1;
+}
+
+.facilities-img:after {
     position: absolute;
-    transition: .3s
-}
-
-.facilities-img.right span {
-    right: 20px;
-    top: 0px;
-    visibility: hidden;
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(image_processing20200505-5583-ca478t.png);
     opacity: 0;
-}
-
-.facilities-img.f-black span {
-    left: 24px;
-    bottom: 0px;
     visibility: hidden;
-    opacity: 0;
-    transition: .3s
+    transition: .4s;
 }
 
-.facilities-img.right:hover span {
+.facilities-img span:first-child {
+    color: #Fff;
+    transform: translate(13px, -8px);
+    transition: .4s;
+}
+
+.facilities-img span:last-child {
+    transform: translate(-13px, 8px);
+    transition: .4s;
+}
+
+.facilities-img:hover p span:first-child {
+    transform: translate(0);
+}
+
+.facilities-img:hover p span:last-child {
+    transform: translate(0);
+}
+
+.facilities-img:hover p {
     opacity: 1;
     visibility: visible;
-    top: 15px;
 }
 
-.facilities-img.f-black:hover span {
-    bottom: 20px;
+.facilities-img:hover:after {
     visibility: visible;
     opacity: 1;
 }
-
-
-/* -----facility slider end */
-
-
-/* =====facility section end here====== */
 
 
 /* *************************************FACILITIES ENDS ********************************** */
@@ -4342,12 +4332,6 @@ img.ifram-main {
     position: relative;
 }
 
-
-/* .iframe__image.last__child .image img:last-child {
-    max-width: 64px;
-    height: 64px;
-} */
-
 .iframe__image.last__child .image {
     position: relative;
 }
@@ -4439,14 +4423,6 @@ img.ifram-main {
 @media screen and (max-width: 320px) {}
 
 
-/* ========================================
-        our gallery section end here
-===========================================*/
-
-
-/* *************************************HEADER STARTS ********************************** */
-
-
 /* *************************************HEADER ENDS ********************************** */
 
 
@@ -4497,13 +4473,6 @@ img.ifram-main {
     ul.section-list {
         padding-right: 0;
     }
-    /* .section-btn-wrap.pt-5 {
-        text-align: center;
-    }
-
-    .section-title2 p {
-        text-align: justify !important;
-    } */
     .activities-page .course-short-modal.market {
         left: 2.5rem !important;
     }
@@ -4564,9 +4533,6 @@ img.ifram-main {
         top: -192px !important;
         left: 9% !important;
     }
-    /* .activities-page .owl-carousel .owl-stage-outer {
-        padding-top: 199px;
-    } */
     .activities-page .owl-carousel .owl-stage-outer {
         padding-top: 87px;
     }
