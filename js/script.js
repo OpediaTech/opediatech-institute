@@ -66,7 +66,7 @@ jQuery(document).ready(function() {
     // }
     $('.marketplace-item-wrap').owlCarousel({
         loop: true,
-        margin: 60,
+        margin: 20,
         responsiveClass: true,
         dots: false,
         nav: true,
@@ -156,7 +156,7 @@ jQuery(document).ready(function() {
     // Clients
     $('.slider__image').owlCarousel({
         loop: true,
-        // spaceBetween: 10,
+        spaceBetween: 30,
         // center: true,
         responsiveClass: true,
         dots: false,
@@ -402,16 +402,16 @@ jQuery(document).ready(function() {
 
     $('.course-sidebar').slick({
         vertical: true,
-        slidesToShow: 8,
+        slidesToShow: 10,
         slidesToScroll: 1,
         asNavFor: '.course-content',
         dots: false,
-        autoplay: true,
+        // autoplay: true,
+        infinite: false,
         arrows: false,
         lazyLoad: 'ondemand',
         centerMode: true,
         focusOnSelect: true,
-
     });
 
     $('.course-content').slick({
@@ -419,7 +419,8 @@ jQuery(document).ready(function() {
         slidesToScroll: 1,
         arrows: false,
         fade: false,
-        autoplay: true,
+        infinite: false,
+        // autoplay: true,
         dots: false,
         asNavFor: '.course-sidebar',
         responsive: [{
@@ -453,6 +454,37 @@ jQuery(document).ready(function() {
             }
         ]
     });
+
+    // scroll with course section
+    const courseLists = document.querySelectorAll('.course-sidebar li')
+    console.log(courseLists)
+    let couseSidebar = document.querySelector('.course-tag-wrapper');
+
+    // couseSidebar.addEventListener('scroll', function(e) {
+    //     console.log('scrolling')
+    // })
+    $(".course-tag-wrapper").scroll(CourseScrollActive);
+
+    function CourseScrollActive() {
+        const scrollY = window.pageYOffset
+
+        courseLists.forEach(current => {
+
+            const sectionHeight = current.offsetHeight,
+                sectionTop = current.offsetTop - 50;
+            // sectionId = current.getAttribute('id')
+
+            // console.log(sectionTop + 'top')
+            // console.log(sectionHeight + 'height')
+
+
+            // if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            //     document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
+            // } else {
+            //     document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
+            // }
+        })
+    }
 
 
 
