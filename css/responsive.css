@@ -96,8 +96,18 @@
         height: auto;
         width: 100%;
     }
+    .hero-section.activities .hero-imgs img {
+        width: 100%;
+    }
+    .hero-section.activities .hero-left-content h1 img {
+        width: 15.5rem;
+        right: 19%;
+    }
     .hero-left-content h1 span {
         font-size: 5rem;
+    }
+    .hero-section {
+        padding-top: 19em;
     }
     .hero-left-content h2 {
         font-size: 4rem;
@@ -109,6 +119,10 @@
     }
     .swiper.mySwiper {
         height: 145px;
+    }
+    .activities-4-wrap .card {
+        height: 313px;
+        width: 100%;
     }
     /* COURSE SECTION */
     ul.course-list li a {
@@ -134,8 +148,18 @@
         font-size: 1.8rem;
         margin-top: 3rem;
     }
+    .activities-4-wrap .btn-main {
+        font-size: 10px !important;
+    }
     .course-section .list-group-item:hover {
         padding-left: 0;
+    }
+    ul.date-activites li {
+        font-size: 1.2rem;
+    }
+    .marketplace-title h3 {
+        font-size: 14px;
+        text-align: left;
     }
     .course-section .list-group-item:before {
         display: none;
@@ -188,6 +212,9 @@
     .teacher-section .owl-carousel .owl-stage-outer {
         width: 100% !important;
     }
+    .hero-section.facilities .hero-left-content h1 img {
+        left: 22%;
+    }
     .facilities-img {
         width: 100%;
         height: auto;
@@ -195,6 +222,9 @@
     .facilities-img p {
         font-size: 20px;
         line-height: 30px;
+    }
+    .marketplace-item-wrap {
+        padding-left: 0px;
     }
     /* MARKET SECTION */
     .course-short-modal.market .course-details-wrap {
@@ -223,7 +253,7 @@
         left: 93%;
     }
     .section-title2 h2 span {
-        font-size: 40px;
+        font-size: 35px;
         display: block
     }
     .section-title2 p {
@@ -240,6 +270,10 @@
     }
     .marketplace-section .owl-carousel .owl-stage-outer {
         width: 100% !important;
+    }
+    .marketplace-section .section-title h2:after {
+        width: 237px;
+        bottom: 5px;
     }
     /* FOOTER */
     .footer__top {
@@ -383,6 +417,9 @@
         font-size: 3rem;
         line-height: 3.9rem;
     }
+    .iframe__image.last__child img {
+        margin-left: 0;
+    }
 }
 
 
@@ -460,6 +497,12 @@
         justify-content: space-around;
         margin-bottom: 2rem;
     }
+    .studentSay .swiper-slide.swiper-slide-active {
+        transform: scale(1);
+    }
+    .image {
+        margin: auto;
+    }
     .course-short-modal {
         left: 16%;
         top: 118px;
@@ -518,6 +561,9 @@
     .list-group-item:hover {
         padding-left: 0;
     }
+    .google-vr-section.pb-100 {
+        padding-bottom: 25px;
+    }
     /* FACILITIES */
     .facilities-section .section-title p {
         padding-right: 0rem;
@@ -557,7 +603,7 @@
     }
     /* MARKET SECTION */
     .marketplace-section .owl-carousel .owl-stage-outer {
-        height: 80rem !important;
+        height: 0;
     }
     .marketplace-title h3 {
         font-size: 14px;
@@ -576,7 +622,7 @@
         padding: 0 1rem !important;
     }
     .teacher-sec-wrap .card-title {
-        font-size: 20px;
+        font-size: 18px;
     }
     svg#circle-1 {
         width: 700px;
@@ -747,6 +793,42 @@
     }
     .social_list img {
         width: 4em;
+    }
+    .activities-section {
+        padding: 0 0 0;
+    }
+    .activities-section .section-title h2:after {
+        width: 250px;
+        bottom: 0;
+    }
+    .facilities-section.mb-150 {
+        margin-bottom: 120px;
+    }
+    .student-project-section {
+        margin-top: 7em;
+    }
+    .activities-bottom.mt-100 {
+        margin: 0;
+    }
+    .student-project-section .section-title h2:after {
+        width: 164px;
+        bottom: 0;
+    }
+    .activities-section .btn-main {
+        font-size: 8px;
+    }
+    ul.date-activites li {
+        font-size: 1.2rem;
+    }
+    .activities-bottom a.btn-main {
+        font-size: 2rem;
+    }
+    .teacher-sec-wrap .card-text {
+        font-size: 14px;
+        line-height: 10px;
+    }
+    .teacher-sec-wrap .card-img-top {
+        height: 200px;
     }
 }
 
@@ -1003,6 +1085,15 @@
         height: 100%;
         width: 100%;
     }
+    .activities-section .card {
+        margin: auto;
+    }
+    .marketplace-item .card {
+        margin: auto;
+    }
+    .teacher-sec-wrap .card {
+        margin: auto;
+    }
 }
 
 @media screen and (max-width: 575PX) {
@@ -1039,13 +1130,16 @@
         display: none;
     }
     .course-wrap .card {
-        width: 310px !important;
+        max-width: 310px !important;
     }
     .course-bottom-item img {
-        width: 6rem;
+        width: 5rem;
+    }
+    .google-vr-section.pt-120 {
+        padding-top: 30px;
     }
     .course-bottom-item span {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         margin-top: 2rem;
     }
     .mb-100 {
@@ -1055,7 +1149,7 @@
         font-size: 1.5rem;
     }
     .course-content .slick-slide {
-        margin-left: 46px;
+        margin-left: 26px;
     }
     /* ACTIVITIES SECTION */
     .activities-section .owl-carousel .owl-stage-outer {
@@ -1114,7 +1208,7 @@
     .featured-img-text .ac-f-title {
         font-size: 22px;
     }
-    ac-hero-content h1 {
+    .ac-hero-content h1 {
         font-size: 25px;
         line-height: 50px;
     }
@@ -1212,15 +1306,21 @@
     }
     .section-title2 h2 span {
         font-size: 26px;
+        line-height: 1.5;
+        margin-top: 17px;
     }
     .activities-section .section-title h2:after {
-        width: 216px;
+        width: 210px;
+        right: 50%;
+        transform: translateX(50%);
     }
     .teacher-section .section-title h2:after {
         width: 258px;
     }
     .marketplace-section .section-title h2:after {
         width: 230px;
+        left: 50%;
+        transform: translateX(-50%);
     }
     .course-content .owl-stage-outer {
         margin-left: 4% !important;
@@ -1234,6 +1334,78 @@
     }
     .hero-left-content h2 {
         font-size: 2rem;
+    }
+    .hero-action.mt-85 {
+        margin-top: 40px;
+    }
+    .section-title.top h2:after {
+        width: 169px;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .google-vr-section iframe {
+        max-height: 400px;
+    }
+    .section-btn-wrap img {
+        width: 7.4rem;
+    }
+    .section-title2.provide h2 span:after {
+        width: 41%;
+        left: 30%;
+    }
+    .activities-bottom a.btn-main {
+        font-size: 1.6rem;
+    }
+    .activities-bottom a.btn-main {
+        font-size: 1.6rem;
+        padding: 1.2rem 2.1rem;
+    }
+    .marketplace-action .btn-main {
+        font-size: 1rem;
+    }
+    .marketplace-section {
+        padding: 15rem 0 0rem;
+    }
+    .marketplace-section .owl-carousel .owl-stage-outer {
+        height: 54rem !important;
+    }
+    .teacher-section .owl-carousel .owl-stage-outer {
+        height: 40rem !important;
+        padding-top: 0rem !important;
+    }
+    .section-title p {
+        font-size: 16px;
+    }
+    .section-title h2.partnar-top:after {
+        top: 0;
+        right: 50%;
+        width: 270px;
+        transform: translateX(50%);
+        width: 137px !important;
+    }
+    .footer__top {
+        padding: 0 0;
+    }
+    .iframe__image.last__child img {
+        width: 100%;
+    }
+    img.imgup_ytb {
+        width: 70px !important;
+    }
+    img.ytbImg {
+        width: 70px !important;
+    }
+    img.ifram-main {
+        height: auto;
+    }
+    .gallary_item img {
+        width: 100% !important;
+    }
+    .hero-section.facilities .hero-left-content h1 img {
+        width: 10rem;
+        left: 5%;
+        bottom: 0;
     }
 }
 
@@ -1288,10 +1460,6 @@
     .course-short-modal.market .course-details-wrap {
         width: 30rem;
     }
-    .marketplace-section .section-title h2:after {
-        right: 50%;
-        transform: translate(50%);
-    }
     .projects-item .card-body h4 {
         font-size: 20px;
     }
@@ -1318,7 +1486,10 @@
         font-size: 12px;
     }
     .seat__title h4 {
-        font-size: 25px;
+        font-size: 20px;
+    }
+    p.testimonial-para {
+        font-size: 15px;
     }
     .overview__course__details .enroll__quate button {
         font-size: 16px;
@@ -1412,6 +1583,12 @@
     img.location_contact {
         top: 38%;
         width: 2em;
+    }
+    .testimonial-circle-wrapper {
+        display: none;
+    }
+    .teacher-section .section-title h2:after {
+        right: 7%;
     }
 }
 

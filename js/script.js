@@ -71,7 +71,7 @@ jQuery(document).ready(function() {
         dots: false,
         nav: true,
         center: true,
-        // autoplay: true,
+        autoplay: true,
         slideBy: 1,
         autoplayHoverPause: true,
         navText: ['<i class="fas fa-arrow-left"></i>', '<i class="fas fa-arrow-right"></i>', ],
@@ -156,22 +156,30 @@ jQuery(document).ready(function() {
     // Clients
     $('.slider__image').owlCarousel({
         loop: true,
-        spaceBetween: 30,
-        // center: true,
+        spaceBetween: 10,
         responsiveClass: true,
         dots: false,
         navText: ['<i class="fas fa-arrow-left"></i>', '<i class="fas fa-arrow-right"></i>', ],
         nav: true,
         responsive: {
             0: {
+                items: 1,
+                nav: false,
+                center: true
+            },
+            500: {
                 items: 2,
                 nav: false
             },
             768: {
-                items: 4,
+                items: 3,
                 nav: false
             },
             992: {
+                items: 4,
+                nav: false
+            },
+            1024: {
                 items: 5,
                 loop: true
             }
@@ -378,16 +386,19 @@ jQuery(document).ready(function() {
             // when window width is >= 320px
             320: {
                 slidesPerView: 1,
+                centeredSlides: false,
             },
             // when window width is >= 480px
             768: {
                 slidesPerView: 2,
-                spaceBetween: 30
+                spaceBetween: 10,
+                centeredSlides: false,
             },
             // when window width is >= 640px
-            1024: {
+            992: {
                 slidesPerView: 3,
-                spaceBetween: 40
+                spaceBetween: 10,
+
             }
         }
     });
@@ -412,6 +423,16 @@ jQuery(document).ready(function() {
         lazyLoad: 'ondemand',
         centerMode: true,
         focusOnSelect: true,
+        responsive: [{
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 6,
+                    slidesToScroll: 1,
+
+                }
+            }
+
+        ]
     });
 
     $('.course-content').slick({
@@ -454,39 +475,6 @@ jQuery(document).ready(function() {
             }
         ]
     });
-
-    // scroll with course section
-    const courseLists = document.querySelectorAll('.course-sidebar li')
-    console.log(courseLists)
-    let couseSidebar = document.querySelector('.course-tag-wrapper');
-
-    // couseSidebar.addEventListener('scroll', function(e) {
-    //     console.log('scrolling')
-    // })
-    $(".course-tag-wrapper").scroll(CourseScrollActive);
-
-    function CourseScrollActive() {
-        const scrollY = window.pageYOffset
-
-        courseLists.forEach(current => {
-
-            const sectionHeight = current.offsetHeight,
-                sectionTop = current.offsetTop - 50;
-            // sectionId = current.getAttribute('id')
-
-            // console.log(sectionTop + 'top')
-            // console.log(sectionHeight + 'height')
-
-
-            // if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            //     document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
-            // } else {
-            //     document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
-            // }
-        })
-    }
-
-
 
 
 

@@ -339,7 +339,7 @@ label {
 .modal.player .modal-body {
     padding: 0;
     height: 400px;
-    width: 700px;
+    /* width: 700px; */
 }
 
 .modal.modalYoutube .modal-content {
@@ -349,7 +349,7 @@ label {
 .modal.modalYoutube .modal-body {
     padding: 0;
     height: 400px;
-    width: 700px;
+    /* width: 700px; */
 }
 
 
@@ -4486,6 +4486,7 @@ img.ifram-main {
 
 .iframe__image.last__child .image {
     position: relative;
+    max-width: 492px;
 }
 
 .iframe__image.last__child img:last-child {
@@ -4504,10 +4505,6 @@ img.ifram-main {
 
 .slider__section {
     margin: 40px 0;
-}
-
-.slider__image img {
-    width: 230px !important;
 }
 
 .image.image__up img.imgup_ytb {
@@ -4618,11 +4615,11 @@ img.ifram-main {
 @media screen and (max-width: 991px) {
     .section-title p {
         padding-right: 0;
-        text-align: justify;
+        text-align: center;
     }
     .our__gallery__inner .title h1,
     .our__gallery__inner .title h1 span {
-        font-size: 40px;
+        font-size: 30px;
     }
     ul.section-list {
         padding-right: 0;
@@ -4676,9 +4673,6 @@ img.ifram-main {
     }
     .facility__section {
         margin: 0 !important;
-    }
-    .section-title.text-center p {
-        margin-bottom: -125px;
     }
     .marketplace-section .owl-carousel .owl-stage-outer {
         padding-top: 20rem !important;
