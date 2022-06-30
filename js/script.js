@@ -417,7 +417,7 @@ jQuery(document).ready(function() {
         slidesToScroll: 1,
         asNavFor: '.course-content',
         dots: false,
-        // autoplay: true,
+        autoplay: true,
         infinite: false,
         arrows: false,
         lazyLoad: 'ondemand',
@@ -441,7 +441,7 @@ jQuery(document).ready(function() {
         arrows: false,
         fade: false,
         infinite: false,
-        // autoplay: true,
+        autoplay: true,
         dots: false,
         asNavFor: '.course-sidebar',
         responsive: [{
