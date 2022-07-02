@@ -733,6 +733,35 @@ img.hero-utils {
 } */
 
 
+/* Industrial attachment */
+
+.industrial-attachment-wrap {
+    position: relative;
+}
+
+img.industrial-blur {
+    width: 556px;
+    height: 390px;
+}
+
+img.industrial-absolute {
+    width: 586px;
+    height: 377px;
+    position: absolute;
+    left: 45px;
+    top: 44px;
+}
+
+img.industrial-dots {
+    width: 241px;
+    height: 241px;
+    position: absolute;
+    left: -45px;
+    top: -46px;
+    z-index: -1;
+}
+
+
 /* *************************************HERO SECTION ENDS ********************************** */
 
 
@@ -825,6 +854,7 @@ ul.section-list li a {
 
 .about-sml-btm img {
     height: inherit;
+    object-fit: cover;
 }
 
 .about-sml-btm:after {
@@ -2481,6 +2511,10 @@ span.ac-date {
 
 /* *************************************    FACILITIES STARTS ********************************** */
 
+.hero-section.facilities {
+    padding-top: 28em;
+}
+
 a.more {
     font-weight: 700;
     font-size: 16px;
@@ -2498,6 +2532,10 @@ a.more {
 
 .facilities-section {
     padding: 50px;
+}
+
+.facility__inner .section-title h2:after {
+    width: 271px;
 }
 
 .facilities-img img {
@@ -3182,13 +3220,14 @@ p.seat-book-text {
     margin: 200px 0;
 }
 
-.partner__section .section-title h2:after {
-    width: 280px;
+.partner-item img {
+    width: 150px !important;
+    height: auto !important;
+    margin: auto;
 }
 
-.partners__logo img {
-    width: 218px;
-    height: auto;
+.partner__section .section-title h2:after {
+    width: 280px;
 }
 
 .section-title h2.partnar-top:after {
@@ -3422,7 +3461,6 @@ h2.partnar-top {
 /* -----facility slider start */
 
 .facility__slider .slider__title {
-    margin-bottom: -50px;
     position: relative;
     z-index: 4;
 }
@@ -3480,13 +3518,12 @@ a.see-video {
 }
 
 .slider__box {
-    left: 761px;
-    top: 1509px;
     background: #FFFFFF;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.07);
     border-radius: 12px;
     padding: 30px 20px 43px;
     margin: 25px 20px;
+    max-width: 382px;
 }
 
 .swiper-slide {
@@ -3595,6 +3632,10 @@ p.mentor_name {
     width: 100% !important;
     height: 210px !important;
     border-radius: 10px !important;
+}
+
+div#courses .section-title {
+    margin-bottom: -20px;
 }
 
 
@@ -4029,6 +4070,10 @@ img.location_contact {
 
 
 /* *************************************ACTIVITIES FORM STARTS ********************************** */
+
+.hero-section.activities {
+    padding-bottom: 18em;
+}
 
 .activities.hero-left-content h1 img {
     position: absolute;

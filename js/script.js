@@ -190,6 +190,8 @@ jQuery(document).ready(function() {
 
 
 
+
+
     // scroll up start here
     $(function() {
         $(window).scroll(function() {
@@ -440,7 +442,7 @@ jQuery(document).ready(function() {
         slidesToScroll: 1,
         arrows: false,
         fade: false,
-        infinite: false,
+        infinite: true,
         autoplay: true,
         dots: false,
         asNavFor: '.course-sidebar',
@@ -474,6 +476,49 @@ jQuery(document).ready(function() {
                 }
             }
         ]
+    });
+
+    //PARTNERS
+    // $('.partners__logo').owlCarousel({
+    //     loop: true,
+    //     spaceBetween: 10,
+    //     responsiveClass: true,
+    //     dots: false,
+    //     nav: false,
+    //     responsive: {
+    //         0: {
+    //             items: 1,
+    //             nav: false,
+    //             center: true
+    //         },
+    //         500: {
+    //             items: 2,
+    //             nav: false
+    //         },
+    //         768: {
+    //             items: 3,
+    //             nav: false
+    //         },
+    //         992: {
+    //             items: 4,
+    //             nav: false
+    //         },
+    //         1024: {
+    //             items: 6,
+    //             loop: true
+    //         }
+    //     },
+    // })
+
+    $('.partners__logo').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        arrows: false,
+        infinite: true,
+        autoplay: true,
+        dots: false,
+
+
     });
 
 

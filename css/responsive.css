@@ -420,6 +420,15 @@
     .iframe__image.last__child img {
         margin-left: 0;
     }
+    img.industrial-blur {
+        width: 100%;
+    }
+    img.industrial-absolute {
+        width: 94%;
+        height: 309px;
+        left: 26px;
+        top: 33%;
+    }
 }
 
 
@@ -829,6 +838,10 @@
     }
     .teacher-sec-wrap .card-img-top {
         height: 200px;
+    }
+    .industrial-attachment-wrap {
+        position: relative;
+        margin-bottom: 100px;
     }
 }
 
@@ -1407,6 +1420,15 @@
         left: 5%;
         bottom: 0;
     }
+    img.industrial-blur {
+        height: 250px;
+    }
+    img.industrial-absolute {
+        width: 100%;
+        height: 250px;
+        left: 26px;
+        top: 10%;
+    }
 }
 
 @media screen and (max-width: 424px) {
@@ -1525,6 +1547,12 @@
     .student-project-section .section-title h2 {
         font-size: 2.2rem;
     }
+    img.industrial-dots {
+        width: 193px;
+        height: 241px;
+        left: -45px;
+        top: -56px;
+    }
 }
 
 @media screen and (max-width: 374PX) {
@@ -1589,6 +1617,21 @@
     }
     .teacher-section .section-title h2:after {
         right: 7%;
+    }
+    img.industrial-blur {
+        height: auto;
+    }
+    img.industrial-absolute {
+        height: auto;
+    }
+    img.industrial-dots {
+        width: 159px;
+        height: 241px;
+        left: -38px;
+        top: -77px;
+    }
+    div#facilities-two {
+        margin-top: -83px;
     }
 }
 
