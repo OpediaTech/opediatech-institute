@@ -846,6 +846,9 @@
     .modal.player .modal-body {
         width: 100%;
     }
+    .modal.modalYoutube .modal-body {
+        width: 100%;
+    }
 }
 
 

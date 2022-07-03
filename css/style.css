@@ -349,7 +349,7 @@ label {
 .modal.modalYoutube .modal-body {
     padding: 0;
     height: 400px;
-    /* width: 700px; */
+    width: 700px;
 }
 
 
@@ -694,8 +694,7 @@ img.hero-utils {
     font-size: 16px;
     line-height: 24px;
     color: rgba(13, 41, 62, 0.6);
-    text-align: justify;
-    direction: rtl;
+    text-align: center;
 }
 
 .hero-left-content h1 img {
@@ -750,6 +749,7 @@ img.industrial-absolute {
     position: absolute;
     left: 45px;
     top: 44px;
+    border-radius: 10px;
 }
 
 img.industrial-dots {
@@ -759,6 +759,15 @@ img.industrial-dots {
     left: -45px;
     top: -46px;
     z-index: -1;
+}
+
+div#facilities-two .section-title2 span {
+    font-size: 52px;
+}
+
+.hero-section.facilities .hero-left-content h1 span {
+    font-size: 10rem;
+    line-height: 1;
 }
 
 
@@ -1306,8 +1315,8 @@ ul.course-list li:hover:before {
     background: linear-gradient(180deg, #FECA3F -4.31%, #F08100 101.19%);
     border-radius: 8px;
     height: 4px;
-    width: 100%;
-    left: 0;
+    width: 47%;
+    right: 0;
     bottom: 0;
 }
 
@@ -2514,7 +2523,13 @@ span.ac-date {
 /* *************************************    FACILITIES STARTS ********************************** */
 
 .hero-section.facilities {
-    padding-top: 28em;
+    padding-top: 23em;
+    margin-bottom: -200px;
+}
+
+div#facilities-two .section-title p {
+    padding-right: 0;
+    direction: rtl;
 }
 
 a.more {
@@ -3007,6 +3022,8 @@ img.main {
     top: 50%;
     transform: translate(-50%, -50%);
     width: 18.5em !important;
+    height: 18.5em !important;
+    object-fit: cover !important;
 }
 
 img.c-3 {
@@ -3026,6 +3043,8 @@ img.c-1 {
     position: absolute;
     left: 14%;
     top: 10%;
+    height: 6.5em;
+    object-fit: cover;
 }
 
 .testimonial-userImage img {
@@ -3045,6 +3064,7 @@ img.c-2 {
     border-radius: 50%;
     height: 8rem;
     width: 8rem;
+    object-fit: cover;
 }
 
 .user-info-wrap {
@@ -3448,7 +3468,7 @@ h2.partnar-top {
     text-align: center;
     color: rgba(13, 41, 62, 0.6);
     line-height: 24px;
-    text-align: justify;
+    text-align: center;
 }
 
 .slide__title img {
