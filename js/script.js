@@ -186,6 +186,39 @@ jQuery(document).ready(function() {
         },
     })
 
+    // Testimonial
+    $('.testimonial-mobile').owlCarousel({
+        loop: true,
+        spaceBetween: 10,
+        responsiveClass: true,
+        dots: true,
+        autoplay: true,
+        nav: false,
+        responsive: {
+            0: {
+                items: 1,
+                nav: false,
+                center: true
+            },
+            500: {
+                items: 1,
+                nav: false
+            },
+            768: {
+                items: 3,
+                nav: false
+            },
+            992: {
+                items: 4,
+                nav: false
+            },
+            1024: {
+                items: 5,
+                loop: true
+            }
+        },
+    })
+
 
 
 
@@ -479,37 +512,6 @@ jQuery(document).ready(function() {
     });
 
     //PARTNERS
-    // $('.partners__logo').owlCarousel({
-    //     loop: true,
-    //     spaceBetween: 10,
-    //     responsiveClass: true,
-    //     dots: false,
-    //     nav: false,
-    //     responsive: {
-    //         0: {
-    //             items: 1,
-    //             nav: false,
-    //             center: true
-    //         },
-    //         500: {
-    //             items: 2,
-    //             nav: false
-    //         },
-    //         768: {
-    //             items: 3,
-    //             nav: false
-    //         },
-    //         992: {
-    //             items: 4,
-    //             nav: false
-    //         },
-    //         1024: {
-    //             items: 6,
-    //             loop: true
-    //         }
-    //     },
-    // })
-
     $('.partners__logo').slick({
         slidesToShow: 5,
         slidesToScroll: 1,
@@ -517,8 +519,36 @@ jQuery(document).ready(function() {
         infinite: true,
         autoplay: true,
         dots: false,
-
-
+        responsive: [{
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true,
+                    arrows: false,
+                    dots: false,
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 4,
+                    slidesToScroll: 2,
+                    dots: false
+                }
+            },
+            {
+                breakpoint: 575,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    dots: false,
+                }
+            }
+        ]
     });
 
 

@@ -339,7 +339,7 @@ label {
 .modal.player .modal-body {
     padding: 0;
     height: 400px;
-    /* width: 700px; */
+    width: 700px;
 }
 
 .modal.modalYoutube .modal-content {
@@ -1900,7 +1900,7 @@ ol.breadcrumb li a {
 }
 
 .modal-content {
-    width: 420px;
+    max-width: 420px;
     border-radius: 10px;
 }
 
@@ -2418,11 +2418,12 @@ span.ac-date {
     margin-top: 124px;
 }
 
-.course-short-modal.market.activityUpcomming {
+
+/* .course-short-modal.market.activityUpcomming {
     position: absolute;
     left: 0;
     bottom: 0;
-}
+} */
 
 .featured-img-text .ac-f-title:first-child:after {
     position: absolute;
@@ -2485,9 +2486,10 @@ span.ac-date {
     max-width: 0 !important;
 }
 
-.activities-page .modal-dialog-centered {
+
+/* .activities-page .modal-dialog-centered {
     min-height: calc(100% - 25.5rem) !important;
-}
+} */
 
 .activities-section.activities-page .owl-nav {
     position: absolute;
@@ -2497,7 +2499,7 @@ span.ac-date {
 
 .activities-page .owl-carousel .owl-stage-outer {
     height: 55rem;
-    width: 102%;
+    width: 100%;
     padding-top: 75px;
     transition: .3s;
 }
@@ -2857,7 +2859,7 @@ span.student-name {
 
 .student-project-section .owl-carousel .owl-stage-outer {
     padding: 0 1rem !important;
-    width: 102% !important;
+    width: 100% !important;
     height: 40rem !important;
     padding-top: 10px !important;
 }
@@ -4678,9 +4680,6 @@ img.ifram-main {
     .hero-section.activities .hero-imgs img {
         width: 100%;
     }
-    .activities-page .course-short-modal.market {
-        left: 100px !important;
-    }
 }
 
 @media screen and (max-width: 575px) {
@@ -4722,18 +4721,21 @@ img.ifram-main {
     .marketplace-section .owl-carousel .owl-stage-outer {
         padding-top: 20rem !important;
     }
-    .course-short-modal.market {
-        top: -192px !important;
-        left: 9% !important;
-    }
     .activities-page .owl-carousel .owl-stage-outer {
         padding-top: 87px;
     }
-    .activities-page .course-short-modal.market.activity {
-        left: 64px !important;
-    }
     .activities-4-wrap .card img {
         width: 100%;
+    }
+    span.student-name {
+        font-size: 12px;
+        line-height: 21px;
+    }
+    .p-student-avater img {
+        height: 6rem;
+    }
+    .p-student-avater {
+        bottom: 6.6rem;
     }
 }
 
@@ -4742,10 +4744,10 @@ img.ifram-main {
         right: 27%;
     }
     .activities-page .course-short-modal.market.activity {
-        left: 38px !important;
+        left: 0 !important;
     }
     .activities-page .course-short-modal.market {
-        left: 65px !important;
+        left: 0 !important;
     }
 }
 
@@ -4760,10 +4762,7 @@ img.ifram-main {
         width: 44%;
     }
     .activities-page .course-short-modal.market.activity {
-        left: 15px !important;
-    }
-    .activities-page .course-short-modal.market {
-        left: 11px !important;
+        left: 0 !important;
     }
 }
 

@@ -227,9 +227,9 @@
         padding-left: 0px;
     }
     /* MARKET SECTION */
-    .course-short-modal.market .course-details-wrap {
+    /* .course-short-modal.market .course-details-wrap {
         width: 30.3rem;
-    }
+    } */
     .activities-page .course-short-modal.market {
         left: -3.5rem;
     }
@@ -537,10 +537,10 @@
         visibility: hidden;
         display: none;
     }
-    .course-short-modal {
+    /* .course-short-modal {
         left: -6%;
         top: 0;
-    }
+    } */
     .course-details-wrap {
         width: 31.3rem;
     }
@@ -577,10 +577,10 @@
     .facilities-section .section-title p {
         padding-right: 0rem;
     }
-    .course-short-modal.market {
+    /* .course-short-modal.market {
         left: -5.5rem;
         top: -5em;
-    }
+    } */
     .course-short-modal.market .course-details-wrap {
         width: 33.3rem;
     }
@@ -620,12 +620,12 @@
     .marketplace-section .owl-item.active.center {
         transform: scale(1);
     }
-    .course-short-modal.market {
+    /* .course-short-modal.market {
         left: 11.5rem;
     }
     .course-short-modal.market .course-details-wrap {
         width: 36.3rem;
-    }
+    } */
     /* STUDENT SECTION */
     .student-project-section .owl-carousel .owl-stage-outer {
         padding: 0 1rem !important;
@@ -661,7 +661,7 @@
         margin: 0 10px;
     }
     .activities-page .course-short-modal.market .course-details-wrap {
-        width: 28.3rem;
+        /* width: 28.3rem; */
         margin: 100px 0;
     }
     .activities-page .course-short-modal.market.activity {
@@ -843,6 +843,9 @@
         position: relative;
         margin-bottom: 100px;
     }
+    .modal.player .modal-body {
+        width: 100%;
+    }
 }
 
 
@@ -890,7 +893,7 @@
     }
     /* COURSE SECTION */
     .course-short-modal {
-        left: 5%;
+        /* left: 5%; */
         top: 0;
     }
     .course-footer {
@@ -1179,10 +1182,6 @@
         margin-top: 25px;
     }
     /* MARKET SECTION */
-    .course-short-modal.market {
-        /* left: 0; */
-        left: 24px;
-    }
     .student-project-section .section-title h2:after {
         right: 50%;
         transform: translate(50%);
@@ -1213,7 +1212,8 @@
         font-size: 20px;
     }
     .activities-page .owl-carousel .owl-stage-outer {
-        height: 67rem;
+        height: 43rem;
+        padding-top: 0;
     }
     .featured-img-text {
         width: 98%;
@@ -1371,7 +1371,7 @@
         font-size: 1.6rem;
     }
     .activities-bottom a.btn-main {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         padding: 1.2rem 2.1rem;
     }
     .marketplace-action .btn-main {
@@ -1428,6 +1428,60 @@
         height: 250px;
         left: 26px;
         top: 10%;
+    }
+    .course-details-title-info h5 {
+        font-size: 17px;
+        margin-bottom: 5px;
+    }
+    .projects-item .card-body h4 {
+        font-size: 15px;
+        line-height: 1;
+    }
+    .projects-item .card-body h4 span {
+        font-size: 12px;
+        line-height: 1;
+    }
+    .activities-bottom.mt-100 {
+        margin-top: -50px;
+    }
+    div#courses {
+        margin-top: 130px;
+    }
+    div#facilities-two {
+        margin-top: -86px;
+    }
+    span#countDown {
+        font-size: 12px;
+    }
+    .course-dureation span {
+        font-size: 1.2rem;
+    }
+    .partner__section .section-title h2 {
+        margin: 0;
+    }
+    .testimonial-section.pt-105.pb-40 {
+        padding-top: 0;
+    }
+    .our__gallery__inner .title {
+        padding-top: 0;
+    }
+    .facility__slider {
+        padding-top: 65px;
+    }
+    .ac-featured-img img {
+        height: auto;
+    }
+    .activities-features-content .btn {
+        right: 20px;
+        top: 15px;
+    }
+    .featured-img-text {
+        bottom: 0;
+    }
+    .activities-page .course-short-modal.market .course-details-wrap {
+        /* max-width: 28.3rem; */
+        /* margin: 0; */
+        margin-top: -20px;
     }
 }
 
@@ -1498,7 +1552,7 @@
         font-size: 1.3rem;
     }
     .activities-page .owl-carousel .owl-stage-outer {
-        height: 67rem;
+        height: 50rem;
     }
     .partners__logo img {
         width: 150px;
@@ -1632,6 +1686,17 @@
     }
     div#facilities-two {
         margin-top: -83px;
+    }
+    .hero-section.facilities .hero-left-content h1 img {
+        left: 50%;
+        transform: translate(-50%);
+    }
+    .hero-section.facilities .hero-btm {
+        font-size: 2rem;
+    }
+    .hero-left-content h1 {
+        font-size: 2.5rem;
+        line-height: 4rem;
     }
 }
 
