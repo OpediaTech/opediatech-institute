@@ -29,6 +29,9 @@
     .container {
         max-width: 1450px;
     }
+    div#facilities-two .section-title2 span {
+        font-size: 52px;
+    }
 }
 
 @media screen and (max-width: 1440px) {
