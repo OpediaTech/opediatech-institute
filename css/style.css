@@ -761,11 +761,6 @@ img.industrial-dots {
     z-index: -1;
 }
 
-.hero-section.facilities .hero-left-content h1 span {
-    font-size: 10rem;
-    line-height: 1;
-}
-
 
 /* *************************************HERO SECTION ENDS ********************************** */
 
@@ -1376,9 +1371,10 @@ ul.course-list li:hover:before {
     height: 2.3rem;
 }
 
-.course-content {
+
+/* .course-content {
     display: none;
-}
+} */
 
 
 /* swiper */
@@ -2971,6 +2967,7 @@ span.student-name {
 .testimonial-circle-wrapper {
     position: relative;
     height: 76.8em;
+    display: none;
 }
 
 .testimonial-section .section-title2 h2 span:after {
