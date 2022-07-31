@@ -1,6 +1,7 @@
 jQuery(document).ready(function() {
 
     //   Courese section
+
     function setDots() {
         $(".owl-dots").removeClass('disabled');
     }
@@ -61,9 +62,6 @@ jQuery(document).ready(function() {
 
 
     //   MARKETPLACE section
-    // function setDots() {
-    //     $(".owl-dots").removeClass('disabled');
-    // }
     $('.marketplace-item-wrap').owlCarousel({
         loop: true,
         margin: 20,
@@ -220,11 +218,6 @@ jQuery(document).ready(function() {
     })
 
 
-
-
-
-
-
     // scroll up start here
     $(function() {
         $(window).scroll(function() {
@@ -241,29 +234,6 @@ jQuery(document).ready(function() {
         });
     });
 
-
-
-
-    // Header
-    /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
-    const sections = document.querySelectorAll('section[id]')
-
-    function scrollActive() {
-        const scrollY = window.pageYOffset
-
-        sections.forEach(current => {
-            const sectionHeight = current.offsetHeight,
-                sectionTop = current.offsetTop - 50,
-                sectionId = current.getAttribute('id')
-
-            // if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            //     document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
-            // } else {
-            //     document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
-            // }
-        })
-    }
-    window.addEventListener('scroll', scrollActive)
 
 
     /*=============== CHANGE BACKGROUND HEADER ===============*/
@@ -350,71 +320,6 @@ jQuery(document).ready(function() {
         $(this).addClass('active')
     })
 
-    $('.course-sidebar').slick({
-        vertical: true,
-        slidesToShow: 10,
-        slidesToScroll: 1,
-        asNavFor: '.course-content',
-        dots: false,
-        autoplay: true,
-        infinite: false,
-        arrows: false,
-        lazyLoad: 'ondemand',
-        centerMode: true,
-        focusOnSelect: true,
-        responsive: [{
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 6,
-                    slidesToScroll: 1,
-
-                }
-            }
-
-        ]
-    });
-
-    $('.course-content').slick({
-        slidesToShow: 3,
-        vertical: false,
-        slidesToScroll: 1,
-        arrows: false,
-        fade: false,
-        infinite: true,
-        autoplay: true,
-        dots: false,
-        asNavFor: '.course-sidebar',
-        responsive: [{
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    dots: true,
-                    arrows: false,
-                    dots: false,
-                }
-            },
-            {
-                breakpoint: 992,
-                settings: {
-                    arrows: false,
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    dots: false
-                }
-            },
-            {
-                breakpoint: 575,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    arrows: false,
-                    dots: false,
-                }
-            }
-        ]
-    });
 
     //PARTNERS
     $('.partners__logo').slick({
@@ -470,105 +375,4 @@ jQuery(document).ready(function() {
         $(".player iframe").attr("src", $(".player2 iframe").attr("src"));
     });
 
-})
-
-$(window).on('load', function() {
-    // $('.course-content').show();
-    $('.testimonial-circle-wrapper').show();
-    // Circle Animation
-    $('.test-img-item').on('click', function(e) {
-        console.log(document.getElementById('test-main').src)
-        document.getElementById('test-main').src = e.target.src
-    })
-
-
-
-    gsap.to(".c-1", {
-        motionPath: {
-            path: "#crcl-1",
-            align: "#crcl-1",
-            autoRotate: true,
-            alignOrigin: [0.5, 0.5],
-            start: -.15
-        },
-        duration: 300,
-        repeat: -1
-    })
-
-    gsap.to(".dots1", {
-        motionPath: {
-            path: "#crcl-1",
-            align: "#crcl-1",
-            autoRotate: true,
-            alignOrigin: [0.5, 0.5],
-            start: -.40
-        },
-        duration: 500,
-        repeat: -1
-    })
-    gsap.to(".c-2", {
-        motionPath: {
-            path: "#crcl-1",
-            align: "#crcl-1",
-            autoRotate: true,
-            alignOrigin: [0.5, 0.5],
-            start: 0.25,
-            end: 1.25
-        },
-        duration: 300,
-        repeat: -1
-    })
-
-
-
-    gsap.to(".c-3", {
-        motionPath: {
-            path: "#crcl-2",
-            align: "#crcl-2",
-            autoRotate: true,
-            alignOrigin: [0.5, 0.5],
-            start: 0.50,
-            end: 1.50
-        },
-        duration: 300,
-
-        repeat: -1
-    })
-    gsap.to(".dots2", {
-        motionPath: {
-            path: "#crcl-2",
-            align: "#crcl-2",
-            autoRotate: true,
-            alignOrigin: [0.5, 0.5],
-            start: 1,
-            end: 1.5
-        },
-        duration: 400,
-        repeat: -1
-    })
-    gsap.to(".C-4", {
-        motionPath: {
-            path: "#crcl-3",
-            align: "#crcl-3",
-            autoRotate: true,
-            alignOrigin: [0.5, 0.5],
-            start: 0.75,
-            end: 1.75
-        },
-        duration: 300,
-        repeat: -1
-    })
-    gsap.to(".dots3", {
-            motionPath: {
-                path: "#crcl-3",
-                align: "#crcl-3",
-                autoRotate: true,
-                alignOrigin: [0.5, 0.5],
-                start: 0.25,
-                end: 1
-            },
-            duration: 400,
-            repeat: -1
-        })
-        // Circle Animation
 })

@@ -2483,15 +2483,6 @@ span.ac-date {
     height: 20.7rem;
 }
 
-.activities-page .modal-dialog {
-    max-width: 0 !important;
-}
-
-
-/* .activities-page .modal-dialog-centered {
-    min-height: calc(100% - 25.5rem) !important;
-} */
-
 .activities-section.activities-page .owl-nav {
     position: absolute;
     left: 93%;

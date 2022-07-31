@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="./css/magnific-popup.css">
     <!--=============== BOXICONS ===============-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/default.css">
     <link rel="stylesheet" href="css/style.css">
@@ -2114,7 +2116,7 @@
 
         <!-- footer section end here -->
     </footer>
-
+    <a href="https://youtu.be/O9RR_qcVos0" class="iframe-link youtube">Youtube</a>
 
     <!-- Js heres -->
 
@@ -2131,6 +2133,9 @@
     <script src="js/script.js"></script>
 
     <script>
+        $('.iframe-link').magnificPopup({
+            type: 'iframe'
+        });
         // count Down
         let data = $('.datecountdown').html();
         // Set the date we're counting down to
@@ -2162,7 +2167,172 @@
             }
         }, 1000);
     </script>
+    <script>
+        $('.course-content').slick({
+            slidesToShow: 3,
+            vertical: false,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: false,
+            infinite: true,
+            autoplay: true,
+            dots: false,
+            asNavFor: '.course-sidebar',
+            responsive: [{
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true,
+                    arrows: false,
+                    dots: false,
+                }
+            }, {
+                breakpoint: 992,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    dots: false
+                }
+            }, {
+                breakpoint: 575,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    dots: false,
+                }
+            }]
+        });
+        $('.course-sidebar').slick({
+            vertical: true,
+            slidesToShow: 10,
+            slidesToScroll: 1,
+            asNavFor: '.course-content',
+            dots: false,
+            autoplay: true,
+            infinite: false,
+            arrows: false,
+            lazyLoad: 'ondemand',
+            centerMode: true,
+            focusOnSelect: true,
+            responsive: [{
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 6,
+                        slidesToScroll: 1,
 
+                    }
+                }
+
+            ]
+        });
+    </script>
+
+    <script>
+        $(window).on('load', function() {
+            // $('.course-content').show();
+            $('.testimonial-circle-wrapper').show();
+            // Circle Animation
+            $('.test-img-item').on('click', function(e) {
+                console.log(document.getElementById('test-main').src)
+                document.getElementById('test-main').src = e.target.src
+            })
+
+
+
+            gsap.to(".c-1", {
+                motionPath: {
+                    path: "#crcl-1",
+                    align: "#crcl-1",
+                    autoRotate: true,
+                    alignOrigin: [0.5, 0.5],
+                    start: -.15
+                },
+                duration: 300,
+                repeat: -1
+            })
+
+            gsap.to(".dots1", {
+                motionPath: {
+                    path: "#crcl-1",
+                    align: "#crcl-1",
+                    autoRotate: true,
+                    alignOrigin: [0.5, 0.5],
+                    start: -.40
+                },
+                duration: 500,
+                repeat: -1
+            })
+            gsap.to(".c-2", {
+                motionPath: {
+                    path: "#crcl-1",
+                    align: "#crcl-1",
+                    autoRotate: true,
+                    alignOrigin: [0.5, 0.5],
+                    start: 0.25,
+                    end: 1.25
+                },
+                duration: 300,
+                repeat: -1
+            })
+
+
+
+            gsap.to(".c-3", {
+                motionPath: {
+                    path: "#crcl-2",
+                    align: "#crcl-2",
+                    autoRotate: true,
+                    alignOrigin: [0.5, 0.5],
+                    start: 0.50,
+                    end: 1.50
+                },
+                duration: 300,
+
+                repeat: -1
+            })
+            gsap.to(".dots2", {
+                motionPath: {
+                    path: "#crcl-2",
+                    align: "#crcl-2",
+                    autoRotate: true,
+                    alignOrigin: [0.5, 0.5],
+                    start: 1,
+                    end: 1.5
+                },
+                duration: 400,
+                repeat: -1
+            })
+            gsap.to(".C-4", {
+                motionPath: {
+                    path: "#crcl-3",
+                    align: "#crcl-3",
+                    autoRotate: true,
+                    alignOrigin: [0.5, 0.5],
+                    start: 0.75,
+                    end: 1.75
+                },
+                duration: 300,
+                repeat: -1
+            })
+            gsap.to(".dots3", {
+                    motionPath: {
+                        path: "#crcl-3",
+                        align: "#crcl-3",
+                        autoRotate: true,
+                        alignOrigin: [0.5, 0.5],
+                        start: 0.25,
+                        end: 1
+                    },
+                    duration: 400,
+                    repeat: -1
+                })
+                // Circle Animation
+        })
+    </script>
 
 
 </body>
